@@ -118,7 +118,7 @@ a_listvariable_5 = {
 }
 ```
 
-#### 7. Map Output. Selecting specific index element.
+### 7. Map Output. Selecting specific index element.
 
 ```
 output "a_listvariable_6" {

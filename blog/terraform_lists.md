@@ -1,10 +1,10 @@
 ---
-sort: 2
+sort: 3
 ---
 
 # Terraform Lists
 
-### Input variables
+### Inputs
 
 ```terraform
 # variable.tf

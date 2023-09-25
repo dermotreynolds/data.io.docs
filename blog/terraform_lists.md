@@ -33,7 +33,7 @@ output "a_listvariable_0" {
 ```
 
 ```console
-
+#>
 a_listvariable_0 = tolist([
   "item1",
   "item2",

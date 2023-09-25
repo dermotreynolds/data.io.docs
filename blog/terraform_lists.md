@@ -32,8 +32,9 @@ output "a_listvariable_0" {
 
 ```
 
-```console
+```terraform
 # console>
+
 a_listvariable_0 = tolist([
   "item1",
   "item2",

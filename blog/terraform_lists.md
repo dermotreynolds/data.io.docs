@@ -6,7 +6,7 @@ sort: 2
 
 ### Input variables
 
-``` 
+```terraform
 # variable.tf
 
 variable "simplelist"{
@@ -14,14 +14,14 @@ variable "simplelist"{
 }
 ```
 
-```
+```terraform
 # variables.tfvars
 
 simplelist = [ "item1", "item2", "item3" ]
 
 ```
 
-### 1. Raw output
+### 1. Raw Output.
 
 ```terraform
 # main.tf
@@ -41,9 +41,11 @@ a_listvariable_0 = tolist([
 ])
 ```
 
-### 2. Array Output
+### 2. Array Output.
 
 ```terraform
+# main.tf
+
 output "a_listvariable_1" {
   value = [ for v in var.simplelist : v ]
 }

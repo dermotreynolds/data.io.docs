@@ -60,7 +60,7 @@ a_listvariable_1 = [
 ```
 
 
-### 2. Array Output. Selecting a specific indexed element.
+### 3. Array Output. Selecting a specific indexed element.
 
 ```
 output "a_listvariable_1" {
@@ -73,7 +73,7 @@ output "a_listvariable_1" {
 a_listvariable_2 = "item1"
 ```
 
-### 3. Array Output. Selecting a specific indexed element.
+### 4. Array Output. Selecting a specific indexed element.
 
 ```
 output "a_listvariable_3" {
@@ -85,7 +85,7 @@ output "a_listvariable_3" {
 a_listvariable_3 = "item1"
 ```
 
-### 4. Array Output. Iterating over list.
+### 5. Array Output. Iterating over list.
 
 
 ```
@@ -102,7 +102,7 @@ a_listvariable_4 = [
 ]
 ```
 
-### 5. Map Output. Iterating over list.
+### 6. Map Output. Iterating over list.
 
 ```
 output "a_listvariable_5" {
@@ -118,7 +118,7 @@ a_listvariable_5 = {
 }
 ```
 
-#### 5. Map Output. Selecting specific index element.
+#### 7. Map Output. Selecting specific index element.
 
 ```
 output "a_listvariable_6" {
@@ -130,7 +130,7 @@ output "a_listvariable_6" {
 a_listvariable_6 = "item1"
 ```
 
-### 6. Map Output.  Selecting specific map item.
+### 8. Map Output.  Selecting specific map item.
 
 ```terraform
 output "a_listvariable_7" {
@@ -138,6 +138,6 @@ output "a_listvariable_7" {
 }
 ```
 
-```
+```console
 a_listvariable_7 = "item1"
 ```

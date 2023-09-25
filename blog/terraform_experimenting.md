@@ -1,4 +1,9 @@
 
+---
+sort: 1
+---
+
+# Terraform Experimenting
 
 ```mermaid
 graph TB
@@ -15,4 +20,8 @@ style Device2 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
 style Device3 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
 style Device4 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
 
+```
+
+```bash
+terraform apply -var-file="./variables.tfvars"
 ```

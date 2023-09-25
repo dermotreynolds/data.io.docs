@@ -117,3 +117,27 @@ a_listvariable_5 = {
   "2" = "item3"
 }
 ```
+
+#### 5. Map Output. Selecting specific index element.
+
+```
+output "a_listvariable_6" {
+  value = { for i,v in var.simplelist : i => v}[0]
+}
+```
+
+```
+a_listvariable_6 = "item1"
+```
+
+### 6. Map Output.  Selecting specific map item.
+
+```terraform
+output "a_listvariable_7" {
+  value = { for v in var.simplelist : v => v}["item1"]
+}
+```
+
+```
+a_listvariable_7 = "item1"
+```

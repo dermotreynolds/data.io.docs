@@ -23,7 +23,6 @@ resource "null_resource" "listvariable_count" {
 ```
 
 ```console
-# console$
 
   # null_resource.listvariable_count[0] will be created
   + resource "null_resource" "listvariable_count" {
@@ -64,7 +63,6 @@ resource "null_resource" "listvariable_for_each" {
 ```
 
 ```console
-console$
 
   # null_resource.listvariable_for_each["item1"] will be created
   + resource "null_resource" "listvariable_for_each" {

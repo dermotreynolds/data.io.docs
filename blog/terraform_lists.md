@@ -53,7 +53,9 @@ output "a_listvariable_1" {
 ```
 
 
-```console
+```terraform
+# console$
+
 a_listvariable_1 = [
   "item1",
   "item2",
@@ -66,25 +68,33 @@ a_listvariable_1 = [
 ### 3. Array Output. Selecting a specific indexed element.
 
 ```terraform
+# main.tf
+
 output "a_listvariable_1" {
   value = [ for v in var.simplelist : v ][0]
 }
 ```
 
 
-```console
+```terraform
+# console$
+
 a_listvariable_2 = "item1"
 ```
 
 ### 4. Array Output. Selecting a specific indexed element.
 
 ```terraform
+# main.tf
+
 output "a_listvariable_3" {
   value = var.simplelist[0]
 }
 ```
 
-```console
+```terraform
+# console$
+
 a_listvariable_3 = "item1"
 ```
 
@@ -92,12 +102,16 @@ a_listvariable_3 = "item1"
 
 
 ```terraform
+# main.tf
+
 output "a_listvariable_4" {
   value = [ for i,v in var.simplelist : "Item ${i} is ${v}" ]
 }
 ```
 
-```console
+```terraform
+# console$
+
 a_listvariable_4 = [
   "Item 0 is item1",
   "Item 1 is item2",
@@ -108,12 +122,16 @@ a_listvariable_4 = [
 ### 6. Map Output. Iterating over list.
 
 ```terraform
+# main.tf
+
 output "a_listvariable_5" {
   value = { for i,v in var.simplelist : i => v}
 }
 ```
 
-```console
+```terraform
+# console$
+
 a_listvariable_5 = {
   "0" = "item1"
   "1" = "item2"
@@ -124,23 +142,31 @@ a_listvariable_5 = {
 ### 7. Map Output. Selecting specific index element.
 
 ```terraform
+# main.tf
+
 output "a_listvariable_6" {
   value = { for i,v in var.simplelist : i => v}[0]
 }
 ```
 
-```console
+```terraform
+# console$
+
 a_listvariable_6 = "item1"
 ```
 
 ### 8. Map Output.  Selecting specific map item.
 
 ```terraform
+# main.tf
+
 output "a_listvariable_7" {
   value = { for v in var.simplelist : v => v}["item1"]
 }
 ```
 
-```console
+```terraform
+# console$
+
 a_listvariable_7 = "item1"
 ```

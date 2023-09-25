@@ -10,7 +10,6 @@ Terraform effectively has 3 variable types as depicted in the digram below.  You
 graph TB
     input(Input Variable)-->module
     subgraph module_code[Module]
-        direction LR
         local(Local Value) --> module((Module))
     end
     module --> output(Output Value)

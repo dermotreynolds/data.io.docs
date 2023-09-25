@@ -66,6 +66,8 @@ variable "virtual_network_name"{
 
 If we now run this with some incorrect values we get:
 
+- Prefix incorrect:
+
 ```python
 var.virtual_network_name is "vn-trans-p-001"
 │
@@ -73,6 +75,8 @@ var.virtual_network_name is "vn-trans-p-001"
 │
 │ This was checked by the validation rule at variables.tf:5,3-13.
 ```
+
+- Input too short:
 
 ```python
 var.virtual_network_name is "vnet-"

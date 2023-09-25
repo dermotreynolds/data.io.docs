@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Blog Articles
+# Terraform Articles
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}

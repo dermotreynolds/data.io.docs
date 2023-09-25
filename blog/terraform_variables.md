@@ -37,17 +37,34 @@ The type constructors allow you to specify complex types such as collections:
 - tuple([<TYPE>, ...])
 
 
+Assume that we want to store a Virtual Network Name such as:
+
+```virtual_network_name = "vnet-trans-p-001"```
+
 The syntax for declaring an input variable is as follows:
 
-```
-variable "image_id" {
+```python
+variable "virtual_network_name" {
   type        = string
-  description = "The id of the machine image (AMI) to use for the server."
+  description = "The name of the virtual network."
 
   validation {
     condition     = length(var.image_id) > 4 && substr(var.image_id, 0, 4) == "ami-"
     error_message = "The image_id value must be a valid AMI id, starting with \"ami-\"."
   }
 }
+```
 
-``````
+```python
+var.virtual_network_name is "vn-trans-p-001"
+│
+│ The virtual_network_name value must be a valid vNet Name, starting with "vnet-".
+│
+│ This was checked by the validation rule at variables.tf:5,3-13.
+```
+
+var.virtual_network_name is "vnet-"
+│
+│ The virtual_network_name value must be a valid vNet Name, starting with "vnet-".
+│
+│ This was checked by the validation rule at variables.tf:5,3-13.

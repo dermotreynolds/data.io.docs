@@ -46,21 +46,25 @@ The type constructors allow you to specify complex types such as collections:
 
 Assume that we want to store a Virtual Network Name such as:
 
-```virtual_network_name = "vnet-trans-p-001"```
+```python
+virtual_network_name = "vnet-trans-p-001"
+```
 
 The syntax for declaring an input variable is as follows:
 
 ```python
-variable "virtual_network_name" {
-  type        = string
-  description = "The name of the virtual network."
+variable "virtual_network_name"{
+     type        = string
+    description = "The name of the virtual network."
 
   validation {
-    condition     = length(var.image_id) > 4 && substr(var.image_id, 0, 4) == "ami-"
-    error_message = "The image_id value must be a valid AMI id, starting with \"ami-\"."
+    condition     = length(var.virtual_network_name) > 5 && substr(var.virtual_network_name, 0, 5) == "vnet-"
+    error_message = "The virtual_network_name value must be a valid vNet Name, starting with \"vnet-\"."
   }
 }
 ```
+
+If we now run this with some incorrect values we get:
 
 ```python
 var.virtual_network_name is "vn-trans-p-001"
@@ -70,8 +74,10 @@ var.virtual_network_name is "vn-trans-p-001"
 │ This was checked by the validation rule at variables.tf:5,3-13.
 ```
 
+```python
 var.virtual_network_name is "vnet-"
 │
 │ The virtual_network_name value must be a valid vNet Name, starting with "vnet-".
 │
 │ This was checked by the validation rule at variables.tf:5,3-13.
+```

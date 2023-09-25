@@ -2,17 +2,24 @@
 sort: 1
 ---
 
-# Quick Intro Terraform Variables
+# Quick Intro To Terraform Variables
 
 Terraform effectively has 3 variable types as depicted in the digram below.  You will note that the Output and Local are refered to a "Values", this is because - in part - their declaration syntax is different.
 
 ```mermaid
 graph TB
-    input(Input Variable)-->module
-    subgraph module_code[Module]
-        local(Local Value) --> module((Module))
+    Device1(Input Variable)-->App0
+    subgraph Group0[Module]
+        Device3(Local Value) --> App0((Module))
     end
-    module --> output(Output Value)
+    App0 --> Device2(Output Value)
+
+style Group0 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+style App0 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+style Device1 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+style Device2 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+style Device3 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+
 ```
 
 ### In summary:

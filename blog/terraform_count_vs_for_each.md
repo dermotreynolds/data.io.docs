@@ -22,7 +22,7 @@ resource "null_resource" "listvariable_count" {
 }
 ```
 
-```terraform
+```console
 # console$
 
 # null_resource.listvariable_count[0] will be created
@@ -63,7 +63,7 @@ resource "null_resource" "listvariable_for_each" {
 }
 ```
 
-```terraform
+```console
 # console$
 
   # null_resource.listvariable_for_each["item1"] will be created

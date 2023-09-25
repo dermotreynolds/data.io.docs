@@ -30,3 +30,4 @@ exclude:
   - webpack.config.js
   - jekyll-rtd-theme.gemspec
   - test_long
+  - test

@@ -1,4 +1,8 @@
 # Welcome
 
-This is the blog of Dermot Reynolds, where I share some my thoughts on Cloud & DevOps.
+This is the blog of Dermot Reynolds, where I share insights on Cloud & DevOps.
+
+The purpose of the majority of articles is to share the nuances of various technologies that I wish that I had known before - of even during :) - using them.
+
+
 

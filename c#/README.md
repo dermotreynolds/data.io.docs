@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# c# Design Articles
+# c# Articles
 
 As with the general theme of this blog, the purpose of the majority of articles to share the nuances of c# in relation to cloud that I find useful.
 

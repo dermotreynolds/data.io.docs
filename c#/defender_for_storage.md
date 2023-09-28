@@ -4,15 +4,18 @@ sort: 1
 
 # Defender For Cloud Example
 
+To determine if a blob has been scanned or contains a virus you need to check specific tags that are deployed on the blob by Defender For Cloud.
+Below is some code that should demonstrate how this is done.
+
 
 1.	Declare some constants for the tags and values that we are looking for:
 
 ```C#
 static class Constants
 {
-    public const string MalwareScanTag = "Malware Scanning scan result";
-	public const string MaliciousFileValue = "Malicious";
-	public const string CleanFileValue = "No threats found";
+    public const string DefenderTag = "Malware Scanning scan result";
+	public const string DefenderHasVirusValue = "Malicious";
+	public const string DefenderIsCleanValue = "No threats found";
 }
 ```
 	
@@ -20,7 +23,7 @@ static class Constants
 2.	Get a blob client for the blob
 
 ```C#
-BlobClient srcBlobClient = sourceContainer.GetBlobClient(blob.Name);
+BlobClient blob = container.GetBlobClient(blob.Name);
 ```
 	
 
@@ -41,7 +44,7 @@ foreach (var tag in tags)
 5.	Check the key:
 
 ```C#
-if (tag.Key.ToString() == Constants.MalwareScanTag)
+if (tag.Key.ToString() == Constants.DefenderTag)
 {
     ...
 }
@@ -52,7 +55,7 @@ if (tag.Key.ToString() == Constants.MalwareScanTag)
 6.	Check the value:
 	
 ```C#
-if (tag.Value.ToString() == Constants.MaliciousFileValue)
+if (tag.Value.ToString() == Constants.DefenderHasVirusValue)
 {
     ...
 }

@@ -1,0 +1,20 @@
+---
+sort: 1
+---
+
+# Managed Identities
+
+Managed Identities negates the need to use passwords - or their equivalents - to connect to resources.
+
+Resources can be created with System or User assigned identities and these identies can be given access to other resources.
+
+For example
+1.  App Service called *app-dev-hello* can be created with a System assigned identity.  It now has an identity of `app-dev-hello`.
+2.  A storage account called *st-dev-hello-data* can be created and the identity of `app-dev-hello` can be given permissions to access it.
+
+The code - that would run on the app service example above - for doing this is very straight forward:
+
+```C#
+var Uri = "https://" + storageAccountName + ".blob.core.windows.net/" + containerName;
+BlobContainerClient containerClient = new BlobContainerClient(new Uri(Uri), new ManagedIdentityCredential());
+```

@@ -14,6 +14,7 @@ Below are the type of Cloud aspects which are typically automated to varying deg
 flowchart LR
     subgraph Vision
         1([e.g.Everything As Code])
+        999(.)
     end
 
     subgraph Automation[Automated Elements]
@@ -69,5 +70,5 @@ flowchart LR
     
     classDef DeviceClass fill:#5463FF,stroke:#5463FF, stroke-width:2px , font-size: 100%, color: white
     classDef GroupClass fill:#FFFFFF,stroke:#5463FF,stroke-width:2px, stroke-dasharray: 3
-    classDef GoodCalloutClass fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2,font-size: 10px
+    classDef GoodCalloutClass fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
 ```

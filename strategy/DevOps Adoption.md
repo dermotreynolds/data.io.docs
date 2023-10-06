@@ -11,7 +11,7 @@ A good reference architecture for "Everying in Cloud" is the [Cloud Adoption Fra
 Below are the type of Cloud aspects which are typically automated to varying degrees.  
 
 ```mermaid
-flowchart TD
+flowchart LR
     subgraph Vision
         1([e.g.Everything As Code])
     end

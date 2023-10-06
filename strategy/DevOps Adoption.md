@@ -1,0 +1,64 @@
+---
+sort: 1
+---
+
+# DevOps Adoption
+
+If you adopting or maturing Infrastructure As Code principles in your organisation it is a good idea to define what your Vision is and determine what you are going to automate to realise your Vision.
+
+A good reference architecture for "Everying in Cloud" is the [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
+
+Below are the type of Cloud aspects which are typically automated to varying degrees.  
+
+```mermaid
+flowchart TD
+    subgraph Vision
+        1([e.g.Everything As Code])
+    end
+
+    subgraph Automation[Automated Elements]
+        1.1[Identity]
+        1.1.1[Roles/Groups]-->1.1
+        1.2[Security]
+        1.2.1[Firewall Rules] --> 1.2
+        1.2.2[NSGs] --> 1.2
+        1.2.3[Controls] --> 1.2
+        1.3[GuardRails]
+        1.3.1[Policies] --> 1.3
+        1.3.1[Policies] --> 1.2.3    
+        1.5[Infrastructure]
+        1.5.1[PaaS/IaaS]-->1.5
+        1.5.2[Firewalls/WAF]-->1.5
+        1.4[Application]
+        1.4.1[Code]-->1.4
+        1.4.2[Packages]-->1.4
+        1.6[Network]
+        1.6.1[vNets]-->1.6
+        1.6.2[Subnets]-->1.6
+        1.6.3[Routes]-->1.6
+        1.7[FinOps]
+        1.7.1[Budgets]-->1.7
+        1.8[Process]
+        1.8.1[Stages]-->1.8
+        1.8.2[Approval]-->1.8
+        1.8.3[Audit]-->1.8
+    end
+    
+    1--> Benefits
+    1.1 --> Vision
+    1.2 --> Vision
+    1.3 --> Vision
+    1.4 --> Vision
+    1.5 --> Vision
+    1.6 --> Vision
+    1.7 --> Vision
+    1.8 --> Vision
+
+    subgraph Benefits
+        direction LR
+        2.1([1. Change Requests are now Pull Requests])
+        2.2([2. CAB is now Peer Review])
+        2.3([3. Rollback is now revert])
+        2.4([4. Changes are now commits])
+    end
+```

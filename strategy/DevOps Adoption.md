@@ -61,4 +61,13 @@ flowchart TD
         2.3([3. Rollback is now revert])
         2.4([4. Changes are now commits])
     end
+
+    class 1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8 DeviceClass
+    class 1.1.1,1.2.1,1.2.2,1.2.3,1.2.4,1.3.1,1.4.1,1.4.2,1.5.1,1.5.2,1.6.1,1.6.2,1.6.3,1.7.1,1.8.1,1.8.2,1.8.3 DeviceClass
+    class 2.1,2.2,2.3,2.4 GoodCalloutClass
+    class Vision,Automation,Benefits GroupClass
+    
+    classDef DeviceClass fill:#5463FF,stroke:#5463FF, stroke-width:2px , font-size: 100%, color: white
+    classDef GroupClass fill:#FFFFFF,stroke:#5463FF,stroke-width:2px, stroke-dasharray: 3
+    classDef GoodCalloutClass fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2,font-size: 10px
 ```

@@ -14,7 +14,6 @@ Below are the type of Cloud aspects which are typically automated to varying deg
 flowchart LR
     subgraph Vision
         1([e.g.Everything As Code])
-        999(.)
     end
 
     subgraph Automation[Automated Elements]
@@ -57,10 +56,10 @@ flowchart LR
 
     subgraph Benefits
         direction LR
-        2.1([1. Change Requests are now Pull Requests])
-        2.2([2. CAB is now Peer Review])
-        2.3([3. Rollback is now revert])
-        2.4([4. Changes are now commits])
+        2.1([1. Change Requests are now Pull Requests.])
+        2.2([2. CAB is now Peer Review               .])
+        2.3([3. Rollback is now revert               .])
+        2.4([4. Changes are now commits              .])
     end
 
     class 1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8 DeviceClass

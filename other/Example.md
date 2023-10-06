@@ -15,12 +15,17 @@ flowchart TD
         d99[fa:fa-cloud Internet]
         d100[fa:fa-cloud Internet]
 
+    i0([1. No Firewall/WAF]):::BadCalloutClass -->d10
+    i1([2. IaaS, not PaaS]):::BadCalloutClass --> d16
+    
     subgraph Group1[Platform]
+        
         d10[fa:fa-server App : Product API]:::DeviceClass 
         
         d10 -->|write|d11[fa:fa-database Storage Account: Product Payload]:::DeviceClass
         d10 --> |write|d12[fa:fa-database Queue: Product Message]:::DeviceClass
-        d10 --> |write|d16[(fa:fa-database Elastic Search: Product)]:::DeviceClass
+        
+        d10 --> |write|d16[(fa:fa-server Elastic Search: Product)]:::DeviceClass
 
         d13[fa:fa-server Product Processor]:::DeviceClass
 
@@ -48,12 +53,20 @@ flowchart TD
 
         d33 --> |write|d35[(fa:fa-database Storage: Pricing)]:::DeviceClass
        
+        
+
         d15 -->|read|d40[fa:fa-server FE Product API]:::DeviceClass
         d16-->|read|d41[fa:fa-server FE Search API]:::DeviceClass
         d15 -->|read|d42[fa:fa-server FE Inventory API]:::DeviceClass
         d15 <-->|read&write|d43[fa:fa-server FE Order API]:::DeviceClass
         d35 -->|read|d44[fa:fa-server FE Pricing API]:::DeviceClass
     end
+
+    i2([3. No Firewall/WAF]):::BadCalloutClass --> d41
+    i3([4. Username/Password Autentication]):::BadCalloutClass -->d13
+    i4([5. No Disaster Recovery]):::BadCalloutClass --> Group1
+    i5([6. No network segmentation]):::BadCalloutClass --> d15
+    
 
     subgraph Group2[User]
         d50[fa:fa-browser Angular App]:::DeviceClass
@@ -78,7 +91,8 @@ flowchart TD
     class 2.1,2.2,2.3,2.4 GoodCalloutClass
     class Group0,Group1,Group2 GroupClass
     
-    classDef DeviceClass fill:#5463FF,stroke:#5463FF, stroke-width:2px , font-size: 100%, color: white
+    classDef DeviceClass fill:#5463FF,stroke:white, stroke-width:2px , font-size: 100%, color: white
     classDef GroupClass fill:#FFFFFF,stroke:#5463FF,stroke-width:2px, stroke-dasharray: 3
     classDef GoodCalloutClass fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    classDef BadCalloutClass fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
 ```

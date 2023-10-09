@@ -100,16 +100,22 @@ flowchart TD
 ```
 
 
-## TO-BE (Summarised)
+## TO-BE (Summarised, Prod Only)
 
 ```mermaid
 flowchart TD
     subgraph Group0[AzureDevOps]
-        d101[terraform]:::DeviceClass
+        d101[terraform/infra]:::DeviceClass
+        d102[CI/CD]:::DeviceClass
     end
 
     d101 --> Group1
+    d102 --> d201
+    d102 --> d202
+    d102 --> d204
+
     subgraph Group1[Platform]
+
         d200[Front Door]:::DeviceClass
 
         d200 --> |private endpoint|d201
@@ -132,6 +138,7 @@ flowchart TD
             end
         end
 
+        Group10 --> |vNet Peer|Group20
 
         subgraph Group3[EU North]
             subgraph Group20[Secondary vNet]
@@ -158,3 +165,12 @@ flowchart TD
     classDef BadCalloutClass fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
 
 ```
+
+### Scalability
+    Function Apps can scale on demand
+
+○ Reliability
+○ Deployability
+○ Availablility
+○ Security
+○ Maintainability

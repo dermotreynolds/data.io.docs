@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Cloud Adoption
+# Azure billing and Active Directory tenant
 
 
 

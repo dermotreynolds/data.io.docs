@@ -284,6 +284,8 @@ flowchart LR
             end            
         end
 
+        Good3([Access to data controlled via NSG]):::GoodCalloutClass
+        Good3 --> Group13
 
         subgraph Group103[Business Subscription]
             subgraph Group2[EU West Resource Group]
@@ -296,6 +298,7 @@ flowchart LR
                         subgraph Group12[App Subnet]
                             d202[fa:fa-server Function App - Processor]:::DeviceClass
                         end
+
 
                         subgraph Group13[Data Subnet]
                             d203[fa:fa-database Storage Account]:::DeviceClass

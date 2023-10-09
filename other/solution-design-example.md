@@ -299,7 +299,7 @@ flowchart LR
 
                         subgraph Group13[Data Subnet]
                             d203[fa:fa-database Storage Account]:::DeviceClass
-                            d204[fa:fa-databaseSql Database]:::DeviceClass
+                            d204[fa:fa-database Sql Database]:::DeviceClass
                             
                         end
                     end

@@ -236,7 +236,7 @@ flowchart LR
         subgraph d101[terraform/infra]
             direction LR
             Identity[Identity Pipeline]:::DeviceClass
-            Policy[Identity Pipeline]:::DeviceClass
+            Policy[Policy Pipeline]:::DeviceClass
             Network[Network Pipeline]:::DeviceClass
             Infrastructure1[Landing Zone Infrastructure Pipeline]:::DeviceClass
             Infrastructure[Application Infrastructure Pipeline]:::DeviceClass
@@ -357,7 +357,9 @@ flowchart LR
 `resource "azurerm_app_service_active_slot" "slotDemoActiveSlot" {...}`
 
 ##### Scalability
-1.  Elastic Changed from IaaS
+1.  Elastic Search Changed from IaaS(3 node) to PaaS.
+2.  All PaaS elements can scale out.
+
 
 
 ### 7.2 Bill Of Materials

@@ -110,49 +110,81 @@ flowchart TD
     end
 
     d101 --> Group1
-    d102 --> d201
-    d102 --> d202
-    d102 --> d204
+    d102 --> d205
+
 
     subgraph Group1[Platform]
 
-        d200[Front Door]:::DeviceClass
 
         d200 --> |private endpoint|d201
         d200 --> |private endpoint|d301
 
-        subgraph Group2[EU West]
-            subgraph Group10[Primary vNet]
-                subgraph Group11[web Subnet]
-                    d201[Function App - API]:::DeviceClass
-                end 
+        subgraph Group102[Transit Subscription]
+            d200[Front Door]:::DeviceClass
+            subgraph Group30[Primary Transit vNet]
 
-                subgraph Group12[App Subnet]
-                    d202[Function App - Processor]:::DeviceClass
-                end
-
-                subgraph Group13[Data Subnet]
-                    d203[Storage Account]:::DeviceClass
-                    d204[Sql Database]:::DeviceClass
-                end
             end
+
+            subgraph Group31[Secondary Transit vNet]
+
+            end
+
         end
 
-        Group10 --> |vNet Peer|Group20
-
-        subgraph Group3[EU North]
-            subgraph Group20[Secondary vNet]
-                subgraph Group21[web Subnet]
-                    d301[Function App - API]:::DeviceClass
-                end
-                subgraph Group22[App Subnet]
-                    d302[Function App - Processor]:::DeviceClass
-                end            
-                subgraph Group23[Data Subnet]
-                    d303[Storage Account]:::DeviceClass
-                    d304[Sql Database]:::DeviceClass
-                end            
+        subgraph Group101[DevOps Subscription]
+            subgraph Group40[Primary Transit vNet]
+                d205[Primary Hosted Agent]:::DeviceClass
             end
+
+            subgraph Group40[Secondary Transit vNet]
+                d206[Secondary Hosted Agent]:::DeviceClass
+            end            
+        end
+
+
+        subgraph Group103[Business Subscription]
+            subgraph Group2[EU West Resource Group]
+                subgraph Group100[App Subscription]
+                    subgraph Group10[Primary App vNet]
+                        subgraph Group11[web Subnet]
+                            d201[Function App - API]:::DeviceClass
+                        end 
+
+                        subgraph Group12[App Subnet]
+                            d202[Function App - Processor]:::DeviceClass
+                        end
+
+                        subgraph Group13[Data Subnet]
+                            d203[Storage Account]:::DeviceClass
+                            d204[Sql Database]:::DeviceClass
+                            
+                        end
+                    end
+                end
+            end
+
+            d205 -.-> |Deployment slots |d201
+            d205 -.-> |Deployment slots |d202
+            d205 -.-> |flyway project |d204
+
+            
+
+            subgraph Group3[EU North Resource Group]
+            
+                subgraph Group20[Secondary vNet]
+                    subgraph Group21[web Subnet]
+                        d301[Function App - API]:::DeviceClass
+                    end
+                    subgraph Group22[App Subnet]
+                        d302[Function App - Processor]:::DeviceClass
+                    end            
+                    subgraph Group23[Data Subnet]
+                        d303[Storage Account]:::DeviceClass
+                        d304[Sql Database]:::DeviceClass
+                    end            
+                end
+            end
+            
         end
 
     end

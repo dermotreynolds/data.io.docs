@@ -327,6 +327,18 @@ flowchart TD
 
 
 ```
+#### Features
+
+##### Security
+1.  Only internet facing service is Front Door.
+1.1.  All other services are not accessible over the internet.
+2.  All application tiers are on different subnets.
+2.1 Traffic between subnets is restricted via NSG.
+
+##### Deployability
+1.  All infrastructure is deployed using IaC(terraform)
+2.  
+
 
 ### 7.2 Bill Of Materials
 

@@ -260,6 +260,8 @@ flowchart TD
         d200 -.-> |private endpoint|d301
 
         subgraph Group102[Transit Subscription]
+            Good2([Only internet facing service]):::GoodCalloutClass
+            Good2 --> d200
             d200[fa:fa-server Front Door]:::DeviceClass
             subgraph Group30[Primary Transit vNet]
                 d207[fa:fa-server Primary Transit Firewall]:::DeviceClass

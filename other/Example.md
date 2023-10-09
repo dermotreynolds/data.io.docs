@@ -106,7 +106,7 @@ flowchart TD
 flowchart TD
     subgraph Group0[AzureDevOps]
         d101[terraform/infra]:::DeviceClass
-        d102[CI/CD]:::DeviceClass
+        d102[Application Deployments]:::DeviceClass
     end
 
     d101 --> Group1

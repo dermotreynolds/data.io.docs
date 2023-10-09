@@ -229,7 +229,7 @@ graph TD
 ### 7.1 Physical Architecture
 
 ```mermaid
-flowchart TD
+flowchart LR
     subgraph Group0[AzureDevOps]
         Good0([Multiple pipielines implement segregation of duties]):::GoodCalloutClass
         Good0 -->d101

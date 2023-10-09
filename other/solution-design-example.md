@@ -363,7 +363,9 @@ flowchart LR
 1.  Elastic Search Changed from IaaS(3 node) to PaaS.
 2.  All PaaS elements can scale out.
 
-
+##### Maintainability
+1.  All pull requests are peer reviewed before being applied to the production branch.
+2.  Environment can be reverted to a previous change by executing terrform against previous branch.
 
 ### 7.2 Bill Of Materials
 

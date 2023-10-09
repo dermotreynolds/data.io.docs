@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Cloud Adoption
+# Platform automation and DevOps
 
 
 

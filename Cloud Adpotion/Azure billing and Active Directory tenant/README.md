@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Governance
+# Azure billing and Active Directory tenant
 
 
 

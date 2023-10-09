@@ -4,10 +4,12 @@ sort: 1
 
 # Other Stuff
 
+## AS-IS
+
 ```mermaid
 flowchart TD
 
-    subgraph Group0[3rd Pary]
+    subgraph Group0[3rd Party]
         d1[fa:fa-server ERP System]:::DeviceClass -->
         d2[fa:fa-server 3rd Party Integration]:::DeviceClass
     end
@@ -95,4 +97,64 @@ flowchart TD
     classDef GroupClass fill:#FFFFFF,stroke:#5463FF,stroke-width:2px, stroke-dasharray: 3
     classDef GoodCalloutClass fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
     classDef BadCalloutClass fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+```
+
+
+## TO-BE (Summarised)
+
+```mermaid
+flowchart TD
+    subgraph Group0[AzureDevOps]
+        d101[terraform]:::DeviceClass
+    end
+
+    d101 --> Group1
+    subgraph Group1[Platform]
+        d200[Front Door]:::DeviceClass
+
+        d200 --> |private endpoint|d201
+        d200 --> |private endpoint|d301
+
+        subgraph Group2[EU West]
+            subgraph Group10[Primary vNet]
+                subgraph Group11[web Subnet]
+                    d201[Function App - API]:::DeviceClass
+                end 
+
+                subgraph Group12[App Subnet]
+                    d202[Function App - Processor]:::DeviceClass
+                end
+
+                subgraph Group13[Data Subnet]
+                    d203[Storage Account]:::DeviceClass
+                    d204[Sql Database]:::DeviceClass
+                end
+            end
+        end
+
+
+        subgraph Group3[EU North]
+            subgraph Group20[Secondary vNet]
+                subgraph Group21[web Subnet]
+                    d301[Function App - API]:::DeviceClass
+                end
+                subgraph Group22[App Subnet]
+                    d302[Function App - Processor]:::DeviceClass
+                end            
+                subgraph Group23[Data Subnet]
+                    d303[Storage Account]:::DeviceClass
+                    d304[Sql Database]:::DeviceClass
+                end            
+            end
+        end
+
+    end
+
+    class Group0,Group1,Group2,Group3 GroupClass
+
+    classDef DeviceClass fill:#5463FF,stroke:white, stroke-width:2px , font-size: 100%, color: white
+    classDef GroupClass fill:#FFFFFF,stroke:#5463FF,stroke-width:2px, stroke-dasharray: 3
+    classDef GoodCalloutClass fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    classDef BadCalloutClass fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+
 ```

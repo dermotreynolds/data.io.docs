@@ -1,0 +1,2076 @@
+<!DOCTYPE html><html><head>
+      <title>Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\dermot\.vscode\extensions\gicentre.markdown-preview-enhanced-with-litvis-0.31.0\node_modules\mume-with-litvis\dependencies\katex\katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\dermot\.vscode\extensions\gicentre.markdown-preview-enhanced-with-litvis-0.31.0\node_modules\mume-with-litvis\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="document-status">Document Status</h1>
+
+<p>The Document Status section is used to display the current status of the design, the options are: Draft, Ready for Review, Approved)</p>
+<table>
+<thead>
+<tr>
+<th>Document Status</th>
+<th><code>Approved</code></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<h1 class="mume-header" id="revision-requests">Revision Requests</h1>
+
+<p>The revisions requests section is used to track requests changes to the design.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Section</th>
+<th>Requested Change</th>
+<th>Authors Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 class="mume-header" id="version-control">Version Control</h1>
+
+<p>The version control section is used to capture design modifications.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Version</th>
+<th>Author</th>
+<th>Section Changed</th>
+<th>Reason for Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30/06/2022</td>
+<td>1.0</td>
+<td>Dermot Reynolds</td>
+<td>Approval</td>
+<td>Approved by TDA - under name &quot;Policy Archive&quot;</td>
+</tr>
+<tr>
+<td>13/07/2022</td>
+<td>1.1</td>
+<td>Shivraj Chari</td>
+<td>TO-BE Details</td>
+<td>Corrected subnet and suSRCription names</td>
+</tr>
+<tr>
+<td>18/07/2022</td>
+<td>1.2</td>
+<td>Shivraj Chari</td>
+<td>TO-BE Details</td>
+<td>Added Subnet details</td>
+</tr>
+<tr>
+<td>22/08/2022</td>
+<td>1.3</td>
+<td>Shivraj Chari</td>
+<td>TO-BE Details</td>
+<td>Updated Subnet details</td>
+</tr>
+<tr>
+<td>11/09/2022</td>
+<td>1.4</td>
+<td>Sathish Balasubramani</td>
+<td>TO-BE Details</td>
+<td>Updated User Access details</td>
+</tr>
+</tbody>
+</table>
+<h1 class="mume-header" id="scope">Scope</h1>
+
+<p>The scope section defines the scope of the design.</p>
+<ul>
+<li>FinCo Archive Application Only.</li>
+</ul>
+<h1 class="mume-header" id="dependencies">Dependencies</h1>
+
+<p>The dependencies will call out any known upstream or downstream dependencies.</p>
+<ul>
+<li>Core Infrastructure</li>
+</ul>
+<h1 class="mume-header" id="methodology">Methodology</h1>
+
+<p>Given the volume of data - 17TB - and the different services we should take a different approach to how we deploy the infrastructure for this application.</p>
+<p>Below is the proposed approach.</p>
+<div class="mermaid">graph LR
+
+    Device0([TDA Approve UAT]) --&gt; Device1([Build UAT]) --&gt; Device2([Test Migration Methods*]) --&gt; Device3([Refine Architecture]) --&gt; Device4([Present To TDA]) --&gt; Device5([Build PROD]) --&gt; Device6([Test/Migrate])
+
+    style Device0 fill:#90EE90,stroke:black,stroke-width:1px , stroke-dasharray: 2
+    style Device1 fill:#90EE90,stroke:black,stroke-width:1px , stroke-dasharray: 2
+    style Device2 fill:#90EE90,stroke:black,stroke-width:1px , stroke-dasharray: 2
+    style Device3 fill:#90EE90,stroke:black,stroke-width:1px , stroke-dasharray: 2
+    style Device4 fill:#90EE90,stroke:black,stroke-width:1px , stroke-dasharray: 2
+    style Device5 fill:#90EE90,stroke:black,stroke-width:1px , stroke-dasharray: 2        
+    style Device6 fill:#90EE90,stroke:black,stroke-width:1px , stroke-dasharray: 2   
+    
+</div><p>*Including mechanisms to reduce cost/complexity e.g. removal of unwanted containers, consolidation etc.</p>
+<h1 class="mume-header" id="solution-overview">Solution Overview</h1>
+
+<p>The solution overview section will introduce the design, this is a single paragraph  describing the Why (requirement) and the How (design)</p>
+<h2 class="mume-header" id="1-background">1. Background</h2>
+
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business</td>
+<td>Group Functions</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>Group Archive</td>
+</tr>
+<tr>
+<td>Business Process</td>
+<td>Management Information</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Stores archive data from a variety of FinCo Policy Administration Systems</td>
+</tr>
+<tr>
+<td>Application Short Code</td>
+<td>arcv</td>
+</tr>
+<tr>
+<td>Business Short Code</td>
+<td>gfn</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>Production</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>3rd Party, 3rdParty</td>
+</tr>
+<tr>
+<td>Business Owner</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>FinCo SME</td>
+<td><a href="mailto:sme@3rdParty.com">sme@3rdParty.com</a></td>
+</tr>
+<tr>
+<td>Support Contact</td>
+<td><a href="mailto:sme@3rdParty.com">sme@3rdParty.com</a></td>
+</tr>
+<tr>
+<td>NIP Trajectory</td>
+<td><code>Move</code></td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="2-production-as-is">2. Production AS-IS</h2>
+
+<h3 class="mume-header" id="key-features">Key Features</h3>
+
+<ol>
+<li>Flat network</li>
+<li>No transit firewall</li>
+<li>No perimiter firewall on PaaS - which is the majority of the services within the application</li>
+<li>Perimiter firewall on IaaS</li>
+<li>Confusing naming conventions - e.g. production services in UAT resource group</li>
+<li>Comingling of production and non-production services</li>
+</ol>
+<div class="mermaid">graph TD
+    subgraph Device0000[Key]
+        Device1000((A)) --&gt; |Network Connection|Device1001((B))
+        Device1002((C)) -.-&gt; |Application Connection|Device1003((D))
+        USR1000((Users))--&gt;Device1004[Device]--&gt;VNET1000((vNet))
+    end
+
+    subgraph Group2[Consumers]
+        USR0([Users])
+        USR1([Users])
+        USR2([Scanner Users])
+        USR3([Developer])
+        %%USR4([Various])
+    end
+
+
+    USR0 -.-&gt;Device7
+    USR1 -.-&gt;Device11
+    USR2 -.-&gt;Device5
+    USR3 -.-&gt;Device12
+
+    subgraph Group6[FinCo Archive]
+
+        subgraph Group0[Great Plains &amp; Complaints - AZ-RG-UAT-SRC001 ]
+            
+            Device7[ServicePlan6755327f-8868/web-uat-SRC001]
+        end
+            BadCallout0([No Firewall]) --&gt; Device7
+            BadCallout0([No Firewall]) --&gt; Device11
+            BadCallout0([No Firewall]) --&gt; Device9
+
+            Device5[S-UAT-APP300 - APG]
+            
+
+
+            Device7 -.-&gt; Device9
+            Device7 -.-&gt; Device8
+            Device7 -.-&gt; Device10
+
+        subgraph Group1[Advisory Archive &amp; FISH - AZ-RG-TG-SRC002]
+            
+            Device11[ServicePlan6755327f-8869/web-prod-SRC001]
+        end
+            Device9[(archivalprod-cosmos)]
+            Device8[cosmosdbsearchnew]
+            Device10[azsaprodSRC001]
+            Device11 -.-&gt; Device9
+            Device11 -.-&gt; Device8
+            Device7 -.-&gt; Device10
+            Device11 -.-&gt; Device10
+
+        
+            Device12[W-UAT-W1060]
+        
+
+        %%Device12 --&gt; Device1
+        %%Device12 --&gt; Device2
+        %%Device12 --&gt; Device3
+        %%Device12 --&gt; Device4
+
+        Device12 -.-&gt; Device9
+        Device12 -.-&gt; Device8
+        Device12 -.-&gt; Device10      
+        Device12 -.-&gt; |release|Device7
+        Device12 -.-&gt; |release|Device11          
+
+
+        subgraph Group5[Wider FinCo]
+            
+        end
+
+        %%Device14 --&gt; |scan to pdf|Device5
+        Device5 -.-&gt; |smb share|Device12
+        
+    end
+
+        Device12 -.-&gt; |adhoc pull|Device14
+    
+    subgraph Group3[Wider FinCo]
+        Device14[Various]
+    end
+
+
+    %%Device0--&gt;|Runs On|Device2
+    %%Device1--&gt;|Runs On|Device2
+    %%Device3--&gt;|Connected To|Device2
+    %%Device3--&gt;|Connected To|VNET1
+    %%Device5--&gt;VNET1
+    %%Device6--&gt;Device7
+
+
+    %%Device6[&quot;prd-foundations.yaml&quot;]
+
+
+    class External1 ExternalClass
+
+    classDef ExternalClass fill:black,stroke:grey, stroke-width:2px , font-size: 100%, color: white
+
+    %%linkStyle 6 stroke-width:2px,fill:none,stroke:red;
+
+
+    %%style Label0 fill:black,color:white, stroke:black
+
+    style Group0 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group1 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group1 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group2 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2    
+    style Group3 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2    
+    %%style Group4 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group5 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2               
+    style Group6 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+
+
+
+
+    %%style Device0 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device1 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device2 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device3 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device4 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device5 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device6 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device7 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device8 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device9 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device10 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device11 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device12 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device13 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device14 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device15 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2             
+    %%style InfoCallout0 fill:yellow	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style InfoCallout1 fill:black	, color: white, stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style GoodCallout0 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+
+    %%style GoodCallout1 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+
+    %%style GoodCallout3 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+    
+
+    %%style Location0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+
+    %%style Device0 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Group0 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Location0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    %%style WAN0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    %%style SUBS0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+        
+    %%style VNET0 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style VNET1 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style VNET2 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2    
+    %%style VNET3 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2 
+    %%style VNET4 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2        
+
+    %%style GoodCallout0 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    style BadCallout0 fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %% style BadCallout1 fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    style USR0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    style USR1 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    style USR2 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px 
+    style USR3 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px   
+
+    %%style UnsureCallout0 fill:#FFBB33	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style InfoCallout0 fill:yellow	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+  
+    %%style VNET1 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2  
+
+    %%Index
+    style Device1000 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Device1001 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Device1002 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Device1003 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Device1004 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Device0000 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %% style KeyDevice1000 fill:white,stroke:#90EE90,colour: white, stroke-width:1px , stroke-dasharray: 0
+    style USR1000 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    style VNET1000 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2  
+
+
+</div><h2 class="mume-header" id="3-non-production-as-is">3. Non Production AS-IS</h2>
+
+<div class="mermaid">graph LR
+    subgraph Group3[AZ-RG-UAT-SRC001 - Development]
+        Device0[(cosmosdb-cosmos)]
+        Device1[cosmosdbsearch]
+        Device2[azsauatSRC001 - unused]
+        Device3[azsauatSRC002]
+        Device4[azsauatSRC003]
+        Device6[W-UAT-WIN - decom]
+    end
+</div><h2 class="mume-header" id="4-production-to-be---segmented-network">4. Production TO-BE - Segmented Network</h2>
+
+<h3 class="mume-header" id="key-features-1">Key Features</h3>
+
+<ol>
+<li>Segmented network</li>
+<li>Transit firewall</li>
+<li>Perimiter firewall on PaaS - which is the majority of the services within the application</li>
+<li>Perimiter firewall on IaaS</li>
+<li>Communication over private network leveraging private endpoints</li>
+<li>Alignment to naming conventions</li>
+<li>Split of production and non-production into different suSRCriptions</li>
+</ol>
+<div class="mermaid">graph LR
+
+    subgraph Group2[Consumers]
+        USR0([Users])
+        USR2([Scanner Users])
+        USR3([Developers])
+        
+    end
+
+
+    %%USR0 -.-&gt;Device7
+    %%USR1 -.-&gt;Device11
+    %%USR2 -.-&gt;  Device5
+    %%USR3 -.-&gt; Device12
+
+    USR0 --&gt;  Device1
+    %%USR1 --&gt;  Device0
+    USR2 --&gt;  Device1
+    USR3 --&gt;  Device2
+    
+
+    %%Device0 --&gt; Device5
+    %%Device0 --&gt; Device12
+
+    subgraph Group8[Transit]
+        subgraph VNET0[VNET-TRANSIT]
+            GoodCallout0([All traffic flows through the transit firewall]) --&gt;Device0
+            Device14((Peer))
+            Device0[Azure Fw]
+            Device1[SDWAN/Meraki/Zscaler]
+            %%Device1--&gt;Device0
+        end
+    end
+    Device14 --&gt;Device13
+    Device15 --&gt; Device14
+    Device16 --&gt; Device14
+    Device20 --&gt; Device14
+
+    subgraph Group9[GINF]
+        subgraph VNET1[VNET-GINF]
+            Device16((Peer))
+            Device2[CyberArk]
+        end
+    end
+        %%Device2--&gt;Device0
+
+    subgraph Group10[Business SuSRCriptions]
+        subgraph VNET2[VNET-BUSINESS]
+            Device15((Peer))
+            Device3[Legacy Services]
+        end
+    end
+    %%Device3--&gt;Device0
+
+    subgraph Group6[Prod Subscription]
+
+        subgraph VNET3[Prod vNet]
+            Device13((Peer))
+            subgraph Group4[Web Subnet]
+                    Device7[Prod App Service]
+
+            end
+
+            subgraph Group7[App Subnet]
+                Device5[Prod Ingestion Server]
+            end
+
+
+                %%Device7 -.-&gt; Device9
+                %%Device7 -.-&gt; Device8
+                %%Device7 -.-&gt; Device10
+
+            subgraph Group5[Data Subnet]
+                Device9[(Prod Cosmos Instance)]
+                Device8[Prod Search Instance]
+                Device10[Prod Storage Instance]
+            end
+        end
+
+        
+    end
+
+    subgraph Group11[UAT Subscription]
+
+        subgraph VNET4[UAT vNet]
+            Device20((Peer))
+            subgraph Group12[UAT Web Subnet]
+                Device21[UAT App Service]
+            end
+
+            subgraph Group13[UAT App Subnet]
+                Device22[UAT Ingestion Server]
+            end
+
+            subgraph Group14[UAT Data Subnet]
+                Device23[(UAT Cosmos Instance)]
+                Device24[UAT Search Instance]
+                Device25[UAT Storage Instance]
+            end
+        end
+
+        
+    end
+        %%Device12 -.-&gt; |adhoc pull|Device3
+    
+    %%subgraph Device0000[Key]
+    %%    Device1000((A)) --&gt; |Network Connection|Device1001((B))
+    %%    Device1002((C)) -.-&gt; |Application Connection|Device1003((D))
+    %%    USR1000((Users))--&gt;Device1004[Device]--&gt;VNET1000((vNet))
+    %%end
+
+
+    %%Device0--&gt;|Runs On|Device2
+    %%Device1--&gt;|Runs On|Device2
+    %%Device3--&gt;|Connected To|Device2
+    %%Device3--&gt;|Connected To|VNET1
+    %%Device5--&gt;VNET1
+    %%Device6--&gt;Device7
+
+
+    %%Device6[&quot;prd-foundations.yaml&quot;]
+
+
+    class External1 ExternalClass
+
+    classDef ExternalClass fill:black,stroke:grey, stroke-width:2px , font-size: 100%, color: white
+
+    %%linkStyle 6 stroke-width:2px,fill:none,stroke:red;
+
+
+    %%style Label0 fill:black,color:white, stroke:black
+
+    %%style Group0 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Group1 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Group1 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group2 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2    
+    %%style Group3 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2    
+    style Group4 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group5 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2               
+    style Group6 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group7 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group8 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group9 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group10 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+
+    style Group11 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    style Group12 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2    
+    style Group13 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2        
+    style Group14 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2        
+
+    style Device0 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device1 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device2 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device3 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device4 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device5 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device6 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device7 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device8 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device9 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device10 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device11 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Device12 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device13 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device14 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device15 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    style Device16 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2  
+    style Device20 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2   
+    style Device21 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2                    
+    style Device22 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2                        
+    style Device23 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2                        
+    style Device24 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2                    
+    style Device25 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2                        
+
+    %%style InfoCallout0 fill:yellow	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style InfoCallout1 fill:black	, color: white, stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    style GoodCallout0 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+
+    %%style GoodCallout1 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+
+    %%style GoodCallout3 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
+    
+
+    %%style Location0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+
+    %%style Device0 fill:white,stroke:#333,colour: white, stroke-width:1px , stroke-dasharray: 2
+    %%style Group0 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Location0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    %%style WAN0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    %%style SUBS0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+        
+    style VNET0 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    style VNET1 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    style VNET2 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2    
+    style VNET3 fill:Green	,stroke:#333,stroke-width:1px , stroke-dasharray: 2 
+    style VNET4 fill:Green	,stroke:#333,stroke-width:1px , stroke-dasharray: 2        
+
+    %%style GoodCallout0 fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style BadCallout0 fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    style USR0 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    %%style USR1 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    style USR2 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px 
+    style USR3 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px   
+
+    %%style UnsureCallout0 fill:#FFBB33	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+    %%style InfoCallout0 fill:yellow	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
+  
+    %%style VNET1 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2  
+
+    %%Index
+    %%style Device1000 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Device1001 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Device1002 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Device1003 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Device1004 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %%style Device0000 fill:#FFFFFF,stroke:#333,stroke-width:1px, stroke-dasharray: 2
+    %% style KeyDevice1000 fill:white,stroke:#90EE90,colour: white, stroke-width:1px , stroke-dasharray: 0
+    %%style USR1000 fill:#F6F7F7,stroke:#0352FC,stroke-width:2px
+    %%style VNET1000 fill:#CDD2D6	,stroke:#333,stroke-width:1px , stroke-dasharray: 2  
+
+</div><h2 class="mume-header" id="5-as-is--to-be-detail-all-environments">5. AS-IS / TO-BE Detail (All Environments)</h2>
+
+<h3 class="mume-header" id="51-as-isprod">5.1 AS-IS/PROD</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+<th>AS-IS - PROD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>archivalprod-cosmos</td>
+<td>cosmosdbsearchnew</td>
+<td>azsaprodSRC001</td>
+<td>ServicePlan6755327f-8869</td>
+<td>web-prod-SRC001</td>
+<td>ServicePlan6755327f-8868</td>
+<td>web-uat-SRC001</td>
+<td>S-UAT-APP300</td>
+<td>W-UAT-W1060</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Data store</td>
+<td>Document search</td>
+<td>Data store</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>Apogee pdf generator</td>
+<td>Scheduler</td>
+</tr>
+<tr>
+<td>SuSRCription</td>
+<td>AZ-TG-PROD-SUB001</td>
+<td>AZ-TG-PROD-SUB001</td>
+<td>AZ-TG-PROD-SUB001</td>
+<td>AZ-TG-PROD-SUB001</td>
+<td>AZ-TG-PROD-SUB001</td>
+<td>AZ-TG-UAT-SUB001</td>
+<td>AZ-TG-UAT-SUB001</td>
+<td>AZ-TG-UAT-SUB001</td>
+<td>AZ-TG-UAT-SUB001</td>
+</tr>
+<tr>
+<td>Resource Group</td>
+<td>AZ-RG-TG-SRC002</td>
+<td>AZ-RG-TG-SRC002</td>
+<td>AZ-RG-TG-SRC002</td>
+<td>AZ-RG-TG-SRC002</td>
+<td>AZ-RG-TG-SRC002</td>
+<td>AZ-RG-UAT-SRC001</td>
+<td>AZ-RG-UAT-SRC001</td>
+<td>AZ-RG-UAT-SRC001</td>
+<td>AZ-RG-UAT-ClockHouse</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>(1)</td>
+<td>(2)</td>
+<td>(3)</td>
+<td>n/a</td>
+<td>(4)</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Azure Cosmos</td>
+<td>Search service</td>
+<td>Storage account</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>Virtual machine</td>
+<td>Virtual machine</td>
+</tr>
+<tr>
+<td>Total Data</td>
+<td>180 GB</td>
+<td>3rep x 6part, 150GB</td>
+<td>13.7 TB</td>
+<td>B2</td>
+<td>n/a</td>
+<td>B2</td>
+<td>n/a</td>
+<td>300GB</td>
+<td>1000GB</td>
+</tr>
+<tr>
+<td>Sku</td>
+<td>Provisioned throughput</td>
+<td>Standard</td>
+<td>GRS,Standard</td>
+<td>Basic</td>
+<td>n/a</td>
+<td>Basic</td>
+<td>n/a</td>
+<td>Standard F4</td>
+<td>Standard D4s v3</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>10.60.27.66</td>
+<td>10.60.4.26</td>
+</tr>
+<tr>
+<td>vNet</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>AZ-VN-UAT-VNET001</td>
+<td>AZ-VN-UAT-VNET001</td>
+</tr>
+<tr>
+<td>Subnet</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>AZ-SN-UAT-COR-SPL001</td>
+<td>AZ-SN-UAT-CLT-SPL003</td>
+</tr>
+<tr>
+<td>Internet Access</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>n/a</td>
+<td>Yes</td>
+<td>n/a</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>(1) <a href="https://archivalprod-cosmos.documents.azure.com:443/">https://archivalprod-cosmos.documents.azure.com:443/</a><br>
+(2) <a href="https://cosmosdbsearchnew.search.windows.net">https://cosmosdbsearchnew.search.windows.net</a><br>
+(3) <a href="https://azsaprodSRC001.blob.core.windows.net/">https://azsaprodSRC001.blob.core.windows.net/</a><br>
+(4) <a href="https://web-prod-SRC001.azurewebsites.net">https://web-prod-SRC001.azurewebsites.net</a></p>
+<h2 class="mume-header" id="52-new-subnet-details">5.2 New Subnet Details</h2>
+
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Name</th>
+<th>vNet</th>
+<th>Subnet Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-d-001</td>
+<td>vnet-gfn-u-eun-001</td>
+<td>10.52.44.48/28</td>
+</tr>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-a-001</td>
+<td>vnet-gfn-u-eun-001</td>
+<td>10.52.44.64/28</td>
+</tr>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-a-i-001</td>
+<td>vnet-gfn-u-eun-001</td>
+<td>10.52.44.40/29</td>
+</tr>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-a-i-002</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>10.52.44.128/29</td>
+</tr>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-d-002</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>10.52.44.80/28</td>
+</tr>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-a-002</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>10.52.44.96/28</td>
+</tr>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-a-i-003</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>10.52.44.112/29</td>
+</tr>
+<tr>
+<td>Prod</td>
+<td>snet-gfn-p-arcv-a-i-004</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>10.52.44.120/29</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="53-new-service-account-details">5.3 New Service Account details</h2>
+
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prod</td>
+<td>SA-CYB-ARCV-P</td>
+<td>For performing read operation on archive database and storage account</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="52-as-isnon-prod">5.2 AS-IS/NON PROD</h3>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Trajectory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cosmosdb-cosmos</td>
+<td>Decom</td>
+</tr>
+<tr>
+<td>cosmosdbsearch</td>
+<td>Decom</td>
+</tr>
+<tr>
+<td>azsauatSRC002</td>
+<td>Decom</td>
+</tr>
+<tr>
+<td>azsauatSRC003</td>
+<td>Decom</td>
+</tr>
+<tr>
+<td>W-UAT-W1051R - decom</td>
+<td>Decom</td>
+</tr>
+<tr>
+<td>azsauatSRC001 - unused</td>
+<td>Decom</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="to-be">TO-BE</h3>
+
+<h4 class="mume-header" id="production">Production</h4>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td>PROD</td>
+<td>PROD</td>
+<td>PROD</td>
+<td>PROD</td>
+<td>PROD</td>
+<td>PROD</td>
+<td>PROD</td>
+<td>PROD</td>
+<td>PROD</td>
+</tr>
+<tr>
+<td>Activity</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>cosmosgfnpeunarcv001</td>
+<td>srch-gfn-p-eun-arcv-001</td>
+<td>stgfnpeunarcv002</td>
+<td>plan-gfn-p-eun-arcv-001</td>
+<td>app-gfn-p-eun-arcv-001</td>
+<td>plan-gfn-p-eun-arcv-002</td>
+<td>app-gfn-p-eun-arcv-002</td>
+<td>vm-arcv-p-w01</td>
+<td>vm-arcv-p-w02</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Application database</td>
+<td>Application search</td>
+<td>Storage account</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>Apogee Scanner</td>
+<td>Management Server</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>10.52.44.71</td>
+<td>10.60.4.5</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>2019</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>Resource Type</td>
+<td>Azure Cosmos DB account</td>
+<td>Azure Cognitive Search</td>
+<td>Storage account</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>VM</td>
+<td>VM</td>
+</tr>
+<tr>
+<td>Sku</td>
+<td>Provisioned throughput</td>
+<td>Standard</td>
+<td>GRS,Standard</td>
+<td>P1v2</td>
+<td>n/a</td>
+<td>P1v2</td>
+<td>n/a</td>
+<td>Standard F4</td>
+<td>Standard D4s v3</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr>
+<td>OS-Disk</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>127</td>
+<td>512</td>
+</tr>
+<tr>
+<td>Non-OS-Disk</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>200</td>
+<td>600</td>
+</tr>
+<tr>
+<td>ResourceGroup</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>rg-gfn-p-eun-arcv-001</td>
+<td>AZ-RG-UAT-ClockHouse</td>
+</tr>
+<tr>
+<td>vNet</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>AZ-VN-UAT-VNET001</td>
+</tr>
+<tr>
+<td>vNet IP</td>
+<td>10.52.44.0/23</td>
+<td>10.52.44.0/23</td>
+<td>10.52.44.0/23</td>
+<td>10.52.44.0/23</td>
+<td>10.52.44.0/23</td>
+<td>10.52.44.0/23</td>
+<td>10.52.44.0/23</td>
+<td>10.52.44.0/23</td>
+<td>10.60.4.0/22</td>
+</tr>
+<tr>
+<td>Subnet</td>
+<td>snet-gfn-p-arcv-d-001</td>
+<td>snet-gfn-p-arcv-d-001</td>
+<td>snet-gfn-p-arcv-d-001</td>
+<td>snet-gfn-p-arcv-a-001</td>
+<td>snet-gfn-p-arcv-a-001</td>
+<td>snet-gfn-p-arcv-a-001</td>
+<td>snet-gfn-p-arcv-a-001</td>
+<td>snet-gfn-p-arcv-a-001</td>
+<td>AZ-SN-UAT-CLT-SPL003</td>
+</tr>
+<tr>
+<td>Subnet IP</td>
+<td>10.52.44.48/28</td>
+<td>10.52.44.48/28</td>
+<td>10.52.44.48/28</td>
+<td>10.52.44.64/28</td>
+<td>10.52.44.64/28</td>
+<td>10.52.44.64/28</td>
+<td>10.52.44.64/28</td>
+<td>10.52.44.64/28</td>
+<td>10.60.4.0/24</td>
+</tr>
+<tr>
+<td>SuSRCription</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>AZ-TG-UAT-SUB001</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>towergate.local</td>
+<td>towergate.local</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+</tr>
+<tr>
+<td>Application</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Apogee Scanner</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Repo Name</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+</tr>
+<tr>
+<td>Pipeline Name</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="pre-prod">Pre-Prod</h4>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+<th>TO-BE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td>pre-prod</td>
+<td>pre-prod</td>
+<td>pre-prod</td>
+<td>pre-prod</td>
+<td>pre-prod</td>
+<td>pre-prod</td>
+</tr>
+<tr>
+<td>Activity</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+<td>New</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>cosmosgfnpeunarcv002</td>
+<td>srch-gfn-p-eun-arcv-002</td>
+<td>stgfnueunarcv004</td>
+<td>plan-gfn-p-eun-arcv-003</td>
+<td>app-gfn-p-eun-arcv-003</td>
+<td>vm-arcv-p-w03</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Application database</td>
+<td>Application search</td>
+<td>Storage account</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>Management Server</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>Resource Type</td>
+<td>Azure Cosmos DB account</td>
+<td>Azure Cognitive Search</td>
+<td>Storage account</td>
+<td>App Service plan</td>
+<td>App Service</td>
+<td>VM</td>
+</tr>
+<tr>
+<td>Sku</td>
+<td>Provisioned throughput</td>
+<td>Standard</td>
+<td>GRS,Standard</td>
+<td>P1v2</td>
+<td>n/a</td>
+<td>Standard D4s v3</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>4</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>16</td>
+</tr>
+<tr>
+<td>OS-Disk</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>512</td>
+</tr>
+<tr>
+<td>Non-OS-Disk</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>600</td>
+</tr>
+<tr>
+<td>ResourceGroup</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+</tr>
+<tr>
+<td>vNet</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+<td>vnet-gfn-p-eun-001</td>
+</tr>
+<tr>
+<td>vNet IP</td>
+<td>10.52.47.0/24</td>
+<td>10.52.47.0/24</td>
+<td>10.52.47.0/24</td>
+<td>10.52.47.0/24</td>
+<td>10.52.47.0/24</td>
+<td>10.52.47.0/24</td>
+</tr>
+<tr>
+<td>Subnet</td>
+<td>snet-gfn-p-arcv-d-002</td>
+<td>snet-gfn-p-arcv-d-002</td>
+<td>snet-gfn-p-arcv-d-002</td>
+<td>snet-gfn-p-arcv-a-002</td>
+<td>snet-gfn-p-arcv-a-002</td>
+<td>snet-gfn-p-arcv-a-002</td>
+</tr>
+<tr>
+<td>Subnet IP</td>
+<td>10.52.44.80/28</td>
+<td>10.52.44.80/28</td>
+<td>10.52.44.80/28</td>
+<td>10.52.44.96/28</td>
+<td>10.52.44.96/28</td>
+<td>10.52.44.96/28</td>
+</tr>
+<tr>
+<td>SuSRCription</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+<td>sub-gfn-p-001</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>towergate.local</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+<td>eun</td>
+</tr>
+<tr>
+<td>Application</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Repo Name</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+<td>repo.gfn</td>
+</tr>
+<tr>
+<td>Pipeline Name</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+<td>arcv.gfn</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="backup-storage-accounts">Backup Storage Accounts</h3>
+
+<table>
+<thead>
+<tr>
+<th>Storage Account Name</th>
+<th>Environment</th>
+<th>SuSRCrption</th>
+<th>Resource Group</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stgfnpeunarcv001</td>
+<td>Prod</td>
+<td>sub-gfn-p-001</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+<td>Backup of Appservice 001 &amp; 002</td>
+</tr>
+<tr>
+<td>stgfnpeunarcv003</td>
+<td>Pre-Prod</td>
+<td>sub-gfn-p-001</td>
+<td>rg-gfn-p-eun-arcv-002</td>
+<td>Backup of Appservice 003 &amp; 004</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="6-migration-journeys">6. Migration Journeys</h2>
+
+<h3 class="mume-header" id="transition">Transition</h3>
+
+<p><b>WARNING: </b>Migration methods still need to be evaulated with the specific data volumnes.</p>
+<table>
+<thead>
+<tr>
+<th>Service Type</th>
+<th>Migration Method*</th>
+<th>Named Service</th>
+<th>Migration Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Storage</td>
+<td>azcopy</td>
+<td>azsaprodSRC001</td>
+<td>Mig Azure Storage</td>
+</tr>
+<tr>
+<td>CosmosDb</td>
+<td>dt</td>
+<td>archivalprod-cosmos</td>
+<td>Mig CosmosDb</td>
+</tr>
+<tr>
+<td>Document search</td>
+<td>Reindex</td>
+<td>cosmosdbsearchnew</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>App Service Plan</td>
+<td>Deploy New</td>
+<td>ServicePlan6755327f-8869</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>App Service</td>
+<td>Deploy New</td>
+<td>web-prod-SRC001,web-uat-SRC001</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="7-network-flows">7. Network Flows</h2>
+
+<p>TODO</p>
+<h2 class="mume-header" id="8-migration-methods">8. Migration methods</h2>
+
+<h4 class="mume-header" id="mig-azure-storage">Mig Azure Storage</h4>
+
+<p>User requires Storage Blob Data Contributor &amp; Storage Blob Data Reader</p>
+<pre data-role="codeBlock" data-info class="language-"><code>.\azcopy sync &apos;https://weustorageaccct01.blob.core.windows.net/data&apos;   &apos;https://stidigdeunerp002.blob.core.windows.net/data&apos; --recursive
+</code></pre><h3 class="mume-header" id="mig-cosmosdb">Mig CosmosDb</h3>
+
+<pre data-role="codeBlock" data-info class="language-"><code>.\dt /s:DocumentDB /s.ConnectionString:&quot;AccountEndpoint=https://source0202020202.documents.azure.com:443/;AccountKey=m3Q8mV0B0sfTrknOVUi2x6LgnzNlPtz8Vc1gkpojF91hDRF67XHLwUsFoWSSmdmAmeiOuFU2k6uDeiGZxzadxw==;Database=db1;&quot; /s.Collection:container1 /t:DocumentDB /t.ConnectionString:&quot;AccountEndpoint=https://source0202020202.documents.azure.com:443/;AccountKey=m3Q8mV0B0sfTrknOVUi2x6LgnzNlPtz8Vc1gkpojF91hDRF67XHLwUsFoWSSmdmAmeiOuFU2k6uDeiGZxzadxw==;Database=db2;&quot; /t.Collection:container1 /t.PartitionKey:/id
+</code></pre><h1 class="mume-header" id="9user-access-list">9.User Access List</h1>
+
+<h2 class="mume-header" id="appendix-a---design-considerations">Appendix A - Design Considerations</h2>
+
+<h3 class="mume-header" id="design-amendment---environment-options">Design Amendment - Environment Options</h3>
+
+<p>&quot;UAT&quot; in the Ardongah Archive uses PII data as it is used for testing ingestion of previously live data.  This will immediatly cause a security compliance issue.<br>
+We should build 2 PROD environments, one of which is used for testing.  Proposal is to build 2 resource groups in prod - ending 001 and 002 - with the usage for the each environment being designated via tagging.</p>
+<h3 class="mume-header" id="business-sign-off">Business Sign Off</h3>
+
+<p><a href=".attachments\Policy%20Archive-eed13926-9c84-46b6-822f-3195c3ec0c55.msg">Policy Archive.msg</a><br>
+<a href=".attachments\MI%20Trader-a8f8d147-8e56-421f-81d9-d7f590f7ed5a.msg">MI Trader.msg</a></p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#document-status" class="md-toc-link">
+            <p>Document Status</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#revision-requests" class="md-toc-link">
+            <p>Revision Requests</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#version-control" class="md-toc-link">
+            <p>Version Control</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#scope" class="md-toc-link">
+            <p>Scope</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#dependencies" class="md-toc-link">
+            <p>Dependencies</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#methodology" class="md-toc-link">
+            <p>Methodology</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#solution-overview" class="md-toc-link"><p>Solution Overview</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1-background" class="md-toc-link">
+            <ol>
+<li>Background</li>
+</ol>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#2-production-as-is" class="md-toc-link"><ol start="2">
+<li>Production AS-IS</li>
+</ol>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#key-features" class="md-toc-link">
+            <p>Key Features</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3-non-production-as-is" class="md-toc-link">
+            <ol start="3">
+<li>Non Production AS-IS</li>
+</ol>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#4-production-to-be---segmented-network" class="md-toc-link"><ol start="4">
+<li>Production TO-BE - Segmented Network</li>
+</ol>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#key-features-1" class="md-toc-link">
+            <p>Key Features</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#5-as-is--to-be-detail-all-environments" class="md-toc-link"><ol start="5">
+<li>AS-IS / TO-BE Detail (All Environments)</li>
+</ol>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#51-as-isprod" class="md-toc-link">
+            <p>5.1 AS-IS/PROD</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#52-new-subnet-details" class="md-toc-link">
+            <p>5.2 New Subnet Details</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#53-new-service-account-details" class="md-toc-link"><p>5.3 New Service Account details</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#52-as-isnon-prod" class="md-toc-link">
+            <p>5.2 AS-IS/NON PROD</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#to-be" class="md-toc-link"><p>TO-BE</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#production" class="md-toc-link">
+            <p>Production</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pre-prod" class="md-toc-link">
+            <p>Pre-Prod</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#backup-storage-accounts" class="md-toc-link">
+            <p>Backup Storage Accounts</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#6-migration-journeys" class="md-toc-link"><ol start="6">
+<li>Migration Journeys</li>
+</ol>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#transition" class="md-toc-link">
+            <p>Transition</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#7-network-flows" class="md-toc-link">
+            <ol start="7">
+<li>Network Flows</li>
+</ol>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#8-migration-methods" class="md-toc-link"><ol start="8">
+<li>Migration methods</li>
+</ol>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#mig-cosmosdb" class="md-toc-link">
+            <p>Mig CosmosDb</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#9user-access-list" class="md-toc-link"><p>9.User Access List</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#appendix-a---design-considerations" class="md-toc-link"><p>Appendix A - Design Considerations</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#design-amendment---environment-options" class="md-toc-link">
+            <p>Design Amendment - Environment Options</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#business-sign-off" class="md-toc-link">
+            <p>Business Sign Off</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "dark"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.querySelectorAll('.mermaid'))
+}
+</script>
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

@@ -113,19 +113,21 @@ flowchart TD
     d102 --> d205
 
 
+
     subgraph Group1[Platform]
 
 
-        d200 --> |private endpoint|d201
-        d200 --> |private endpoint|d301
+        d200 -.-> |private endpoint|d201
+        d200 -.-> |private endpoint|d301
 
         subgraph Group102[Transit Subscription]
             d200[Front Door]:::DeviceClass
             subgraph Group30[Primary Transit vNet]
-
+                d207[Primary Transit Firewall]:::DeviceClass
             end
 
             subgraph Group31[Secondary Transit vNet]
+                d208[Secondary Transit Firewall]:::DeviceClass
 
             end
 
@@ -136,7 +138,7 @@ flowchart TD
                 d205[Primary Hosted Agent]:::DeviceClass
             end
 
-            subgraph Group40[Secondary Transit vNet]
+            subgraph Group41[Secondary Transit vNet]
                 d206[Secondary Hosted Agent]:::DeviceClass
             end            
         end
@@ -196,13 +198,46 @@ flowchart TD
     classDef GoodCalloutClass fill:#90EE90	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
     classDef BadCalloutClass fill:#FF5733	,stroke:#333,stroke-width:1px , stroke-dasharray: 2   
 
+
+
 ```
 
-### Scalability
-    Function Apps can scale on demand
+```mermaid
+flowchart TD
 
-○ Reliability
-○ Deployability
-○ Availablility
-○ Security
-○ Maintainability
+    subgraph Region0
+        vNet2[Spoke Primary vNet] <-->
+        vNet0[Primary Transit vNet]
+        
+    end
+
+    subgraph Region1
+        vNet3[Spoke Primary vNet] <-->
+        vNet1[Secondary Transit vNet]
+        
+    end
+
+    vNet0 <--> vNet1
+
+
+
+```
+
+### 1. Security
+- All services are "behind" the Front Door
+- 
+
+### 1. Scalability
+- PaaS services can scale on demand.
+
+### Reliability
+
+
+### Deployability
+
+
+### Availability
+
+
+
+### Maintainability

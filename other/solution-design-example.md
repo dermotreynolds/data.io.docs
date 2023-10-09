@@ -231,7 +231,20 @@ graph TD
 ```mermaid
 flowchart TD
     subgraph Group0[AzureDevOps]
-        d101[terraform/infra]:::DeviceClass
+        Good0([Multiple pipielines implement segregation of duties]):::GoodCalloutClass
+        Good0 -->d101
+        subgraph d101[terraform/infra]
+            direction LR
+            Identity[Identity Pipeline]:::DeviceClass
+            Policy[Identity Pipeline]:::DeviceClass
+            Network[Network Pipeline]:::DeviceClass
+            Infrastructure1[Landing Zone Infrastructure Pipeline]:::DeviceClass
+            Infrastructure[Application Infrastructure Pipeline]:::DeviceClass
+        end
+
+        Good1([Application team can run the infrastructure pipeline]):::GoodCalloutClass
+        Good1 --> Infrastructure
+
         d102[Application Deployments]:::DeviceClass
     end
 
@@ -247,13 +260,13 @@ flowchart TD
         d200 -.-> |private endpoint|d301
 
         subgraph Group102[Transit Subscription]
-            d200[Front Door]:::DeviceClass
+            d200[fa:fa-server Front Door]:::DeviceClass
             subgraph Group30[Primary Transit vNet]
-                d207[Primary Transit Firewall]:::DeviceClass
+                d207[fa:fa-server Primary Transit Firewall]:::DeviceClass
             end
 
             subgraph Group31[Secondary Transit vNet]
-                d208[Secondary Transit Firewall]:::DeviceClass
+                d208[fa:fa-server Secondary Transit Firewall]:::DeviceClass
 
             end
 
@@ -261,11 +274,11 @@ flowchart TD
 
         subgraph Group101[DevOps Subscription]
             subgraph Group40[Primary Transit vNet]
-                d205[Primary Hosted Agent]:::DeviceClass
+                d205[fa:fa-server Primary Hosted Agent]:::DeviceClass
             end
 
             subgraph Group41[Secondary Transit vNet]
-                d206[Secondary Hosted Agent]:::DeviceClass
+                d206[fa:fa-server Secondary Hosted Agent]:::DeviceClass
             end            
         end
 
@@ -275,16 +288,16 @@ flowchart TD
                 subgraph Group100[App Subscription]
                     subgraph Group10[Primary App vNet]
                         subgraph Group11[web Subnet]
-                            d201[Function App - API]:::DeviceClass
+                            d201[fa:fa-server Function App - API]:::DeviceClass
                         end 
 
                         subgraph Group12[App Subnet]
-                            d202[Function App - Processor]:::DeviceClass
+                            d202[fa:fa-server Function App - Processor]:::DeviceClass
                         end
 
                         subgraph Group13[Data Subnet]
-                            d203[Storage Account]:::DeviceClass
-                            d204[Sql Database]:::DeviceClass
+                            d203[fa:fa-database Storage Account]:::DeviceClass
+                            d204[fa:fa-databaseSql Database]:::DeviceClass
                             
                         end
                     end
@@ -301,14 +314,14 @@ flowchart TD
             
                 subgraph Group20[Secondary App vNet]
                     subgraph Group21[web Subnet]
-                        d301[Function App - API]:::DeviceClass
+                        d301[fa:fa-server Function App - API]:::DeviceClass
                     end
                     subgraph Group22[App Subnet]
-                        d302[Function App - Processor]:::DeviceClass
+                        d302[fa:fa-server Function App - Processor]:::DeviceClass
                     end            
                     subgraph Group23[Data Subnet]
-                        d303[Storage Account]:::DeviceClass
-                        d304[Sql Database]:::DeviceClass
+                        d303[fa:fa-server Storage Account]:::DeviceClass
+                        d304[fa:fa-database Sql Database]:::DeviceClass
                     end            
                 end
             end
@@ -334,10 +347,15 @@ flowchart TD
 1.1.  All other services are not accessible over the internet.
 2.  All application tiers are on different subnets.
 2.1 Traffic between subnets is restricted via NSG.
+3.  Policies enforce security standards.
 
 ##### Deployability
 1.  All infrastructure is deployed using IaC(terraform)
-2.  
+2.  Blue/green deployments via Slots
+`resource "azurerm_app_service_active_slot" "slotDemoActiveSlot" {...}`
+
+##### Scalability
+1.  Elastic Changed from IaaS
 
 
 ### 7.2 Bill Of Materials

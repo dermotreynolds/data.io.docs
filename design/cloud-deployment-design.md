@@ -2,40 +2,29 @@
 sort: 1
 ---
 
-# Solution Design Example
+# Cloud Deployment Design (Draft, please customise)
+
+```note
+The purpose of this document is to provide the necessary technical details to an engineer to deploy the infrastructure.  For smaller applications this may be sufficient, for larger applications this will need to be supplemented within an overarching Solution Design.
+```
 
 ## 1. Document Status
 ```note
 The Document Status section is used to display the current status of the design, the options are: Draft, Ready for Review, Approved)
 ```
 
-Document Status:   `Approved`
+Document Status:   `Draft`
 
-## 2. Project Properties
+## 2. Application Context
 
-### 2.1 Organisation Properties
-
-|Name                       |Value    |
-|---------------------------|---------|
-|Company                    |         |
-|Segment                    |         |
-|Program Sponsor            |         |
-
-### 2.2 Project Properties
-
-|Name                       |Value    |
-|---------------------------|---------|
-|Project Title              |         |
-|Project Description        |         |
-|Business Application Owner |         |
-|Business Technical Owner   |         |
-|Operational Owner          |         |
-
-### 2.3 TCO Properties
-
-|Name                       |Value    |
-|---------------------------|---------|
-|Support/instance/year      | £1,000  |
+|Name                       |Value    |Description                              |
+|---------------------------|---------|-----------------------------------------|
+|Business Unit              |         |This is used to detemine the subscription|
+|Application Name           |         |This is used to determine the names of the resources|
+|Project Description        |         |                                         |
+|Business Application Owner |         |Tag Value                                |
+|Business Technical Owner   |         |Tag Value                                |
+|Operational Owner          |         |Tag Value                                |
 
 ## 3. Revision Requests
 ```note
@@ -60,12 +49,17 @@ The version control section is used to capture design modifications.
 
 ## 5. Requirements
 
+
 | Requirement#  |Date | Description | Addressed By     | Reviewed Date  |
 |---------------|-----|-------------|------------------|----------------|
 |               |     |             |                  |                |
 
 
 ## 6. AS-IS
+
+```note
+If this is a transformation or migration please provide the AS-IS detail.
+```
 
 ### 6.1 Physical Architecture
 

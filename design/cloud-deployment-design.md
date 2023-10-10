@@ -4,7 +4,7 @@ sort: 1
 
 # Cloud Deployment Design (Draft, please customise)
 
-```note
+```tip
 The purpose of this document is to provide the necessary technical details to an engineer to deploy the infrastructure.  For smaller applications this may be sufficient, for larger applications this will need to be supplemented within an overarching Solution Design.
 ```
 

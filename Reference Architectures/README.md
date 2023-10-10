@@ -18,6 +18,6 @@ Generally they cover aspects such as:
 - Security
     Specific security nuances of the architecture.
 
-[Browse Azure Architectures](https://learn.microsoft.com/en-us/azure/architecture/browse/)
+[You Can Browse Azure Architectures Here](https://learn.microsoft.com/en-us/azure/architecture/browse/)
 
 {% include list.liquid all=true %}

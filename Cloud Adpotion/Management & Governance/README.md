@@ -8,7 +8,6 @@ sort: 1
 
 ## Azure Backup
 
-
 ## Microsoft Cost Management
 
 ## Azure Policy

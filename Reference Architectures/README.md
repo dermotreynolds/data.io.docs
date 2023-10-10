@@ -10,12 +10,16 @@ These should be the first port of call when determining how an application shoul
 
 Generally they cover aspects such as:
 - Components
+
     These should link back to your cloud patterns.
 - Availability
+    
     This should be based on your Non Functional Requirements.
 - Performance
+    
     Also based on your Non Functional Requirements.
 - Security
+    
     Specific security nuances of the architecture.
 
 [You Can Browse Azure Architectures Here](https://learn.microsoft.com/en-us/azure/architecture/browse/)

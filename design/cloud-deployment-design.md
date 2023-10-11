@@ -194,17 +194,6 @@ graph TD
 |Subnet         |             |             |             |
 
 
-### 3.3 Key Statistics
-
-|Statistic            | AS-IS       |
-|---------------------|-------------|
-|Resources            |         3   |
-|Monthly Infra Cost   |       £1,000|
-|Yearly Infra Cost    |      £12,000|
-|1 Year TCO           |      £15,000|
-|3 Year TCO           |      £45,000|
-
-
 ## 4. TO-BE
 
 ### 4.1 Identity & Access Management
@@ -231,14 +220,60 @@ graph TD
 #### 4.4.3 Resource Group
 #### 4.4.4 Tagging
 
+### 4.5 Governance
+#### 4.5.1 Cost Management
+##### 4.5.1.1 AS-IS Cost
+|Statistic            | AS-IS       |
+|---------------------|-------------|
+|Resources            |         3   |
+|Monthly Infra Cost   |       £1,000|
+|Yearly Infra Cost    |      £12,000|
+|1 Year TCO           |      £15,000|
+|3 Year TCO           |      £45,000|
+##### 4.5.1.2 TO-BE Cost
+|Statistic            |    TO-BE    |
+|---------------------|-------------|
+|Resources            |            3|
+|Monthly Infra Cost   |       £500  |
+|Yearly Infra Cost    |      £6,000 |
+|1 Year TCO           |      £9,000 |
+|3 Year TCO           |      £27,000|
+##### 4.5.1.3 Cost Comparison
 
+##### 4.5.1.4 Budget
 
+#### 4.5.2 Capacity Management
+#### 4.5.3 Azure Policy
 
+### 4.6 Security
+#### 4.6.1 Network Security Groups
+#### 4.6.2 Firewall Rules
+#### 4.6.3  DDoS
+#### 4.6.4  WAF
+#### 4.6.5  Security Center
+#### 4.6.6  Sentinel
+#### 4.6.7  Secrets Management
+#### 4.6.8  Encryption
 
+### 4.7 Networking
+#### 4.7.1 Virtual Network
+#### 4.7.2 Subnet
+#### 4.7.3 Route Table
 
+### 4.8 Dependencies
+#### 4.8.1 Platform Dependencies
+#### 4.8.2 DNS
+#### 4.8.3 Application Dependencies 
 
+### 4.9 DevOps
+#### 4.9.1 Infrastructure Deployment
+#### 4.9.2 Application Deployment
 
-### 4.1 Physical Architecture
+### 4.10 Architecture
+
+#### 4.10.1 Environments
+
+#### 4.10.2 Physical Architecture
 
 ```mermaid
 graph LR
@@ -319,7 +354,7 @@ graph LR
         %%style UnsureCallout0 fill:#FFBB33	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
 ```
 
-### 4.2 Bill Of Materials
+#### 4.10.3 Bill Of Materials
 
 |               |S-FINCO-SQL01|S-FINCO-WEB01|AS-FINCO-WWW01|
 |---------------|-------------|-------------|-------------|
@@ -334,46 +369,10 @@ graph LR
 |Virtual Network|             |             |             |
 |Subnet         |             |             |             |
 
-### 4.3 Key Statistics
 
-|Statistic            |    TO-BE    |
-|---------------------|-------------|
-|Resources            |            3|
-|Monthly Infra Cost   |       £500  |
-|Yearly Infra Cost    |      £6,000 |
-|1 Year TCO           |      £9,000 |
-|3 Year TCO           |      £27,000|
+## 5 Implementation
 
-## 8 AS-IS vs TO-BE Comparison
-
-
-### 8.1 Bill Of Materials
-
-
-
-### 8.2 Key Statistics
-
-|Statistic            | AS-IS       |    TO-BE    |Delta      |
-|---------------------|-------------|-------------|-----------|
-|Resources            |            3|            3| 0         |
-|Monthly Infra Cost   |       £1,000|        £500 |      -£500|
-|Yearly Infra Cost    |      £12,000|       £6000 |    -£6000 |
-|1 Year TCO           |      £15,000|       £9000 |    -£6000 |
-|3 Year TCO           |      £45,000|      £27000 |   -£18000 |
-
-## 9 Implementation
-
-### 9.1 Activities
-
-|#   |Start Date|End Date  | Associated Resource | Activity         | Assigned Resource | Status     |
-|----|----------|----------|---------------------|------------------|-------------------|------------|
-|T1  |21/03/22  |21/03/22  |AS-FINCO-WWW01       |Deploy asset      | john@dlta.io      | `TO-DO`    |
-|T2  |22/03/22  |22/03/22  |AS-FINCO-WWW01       |Deploy app        | john@dlta.io      | `TO-DO`    |
-|T3  |23/03/22  |23/03/22  |AS-FINCO-WWW01       |Test app          | john@dlta.io      | `TO-DO`    |
-|T4  |24/03/22  |24/03/22  |AS-FINCO-WWW01       |Service introduce | john@dlta.io      | `TO-DO`    |
-|T5  |25/03/22  |25/03/22  |S-FINCO-WEB02        |Decommission      | john@dlta.io      | `TO-DO`    |
-
-### 9.2 Roadmap
+### 5.2 High Level Roadmap
 
 ```mermaid
 gantt

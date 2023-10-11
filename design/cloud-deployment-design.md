@@ -8,7 +8,7 @@ sort: 1
 The purpose of this document is to provide the necessary technical details to an engineer to deploy the infrastructure.  For smaller applications this may be sufficient, for larger applications this will need to be supplemented within an overarching Solution Design.
 ```
 
-##### Document Status
+#### Document Status
 ```note
 The Document Status section is used to display the current status of the design, the options are: Draft, Ready for Review, Approved)
 ```
@@ -370,7 +370,7 @@ graph LR
 |Subnet         |             |             |             |
 
 
-## 5 Implementation
+## 5 Implementation Approach
 
 ### 5.2 High Level Roadmap
 
@@ -386,6 +386,6 @@ gantt
     Decommission            :a5,after a4  , 1d    
 ```
 
-### Appendix A - Naming Conventions
+## Appendix A - Naming Conventions
 
 https://learn.microsoft.com/en-us/azure/architecture/landing-zones/subscription-vending

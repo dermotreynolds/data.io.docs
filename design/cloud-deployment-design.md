@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Title: Cloud Deployment Design (Draft)
+# Application Deployment Design (Draft)
 
 ```tip
 This template is based on the Design areas for Azure Landing Zones with additional sections relevant to application deployment.
@@ -367,21 +367,6 @@ graph LR
 |Subnet         |             |             |             |
 
 
-## 5 Implementation Approach
-
-### 5.2 High Level Roadmap
-
-```mermaid
-gantt
-    title Roadmap
-    dateFormat  DD-MM-YYYY
-    section Section
-    Deploy asset   :a1,21-03-2022, 1d
-    Deploy app     :a2,after a1  , 1d
-    Test app       :a3,after a2  , 1d    
-    Service introduce       :a4,after a3  , 1d    
-    Decommission            :a5,after a4  , 1d    
-```
 
 ## Appendix A - Naming Conventions
 

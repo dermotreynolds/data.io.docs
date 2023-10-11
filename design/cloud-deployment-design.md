@@ -8,25 +8,14 @@ sort: 1
 The purpose of this document is to provide the necessary technical details to an engineer to deploy the infrastructure.  For smaller applications this may be sufficient, for larger applications this will need to be supplemented within an overarching Solution Design.
 ```
 
-## 1. Document Status
+## Document Status
 ```note
 The Document Status section is used to display the current status of the design, the options are: Draft, Ready for Review, Approved)
 ```
 
 Document Status:   `Draft`
 
-## 2. Application Context
-
-|Name                       |Value    |Description                              |
-|---------------------------|---------|-----------------------------------------|
-|Business Unit              |         |This is used to detemine the subscription|
-|Application Name           |         |This is used to determine the names of the resources|
-|Project Description        |         |                                         |
-|Business Application Owner |         |Tag Value                                |
-|Business Technical Owner   |         |Tag Value                                |
-|Operational Owner          |         |Tag Value                                |
-
-## 3. Revision Requests
+## Revision Requests
 ```note
 The revisions requests section is used to track requests changes to the design.
 ```
@@ -37,7 +26,7 @@ The revisions requests section is used to track requests changes to the design.
 |  |  |  |  |
 |  |  |  |  |
 
-## 4. Version Control
+## Version Control
 
 ```note
 The version control section is used to capture design modifications.
@@ -47,7 +36,20 @@ The version control section is used to capture design modifications.
 |--|--|--|--|--|--|
 |0.1 |01/09/2021  |Dermot Reynolds  |ALL  |Document Creation  |
 
-## 5. Requirements
+## 1. Application Context
+
+|Name                       |Value    |Description                              |
+|---------------------------|---------|-----------------------------------------|
+|Business Unit              |         |This is used to detemine the subscription|
+|Application Name           |         |This is used to determine the names of the resources|
+|Project Description        |         |                                         |
+|Business Application Owner |         |Tag Value                                |
+|Business Technical Owner   |         |Tag Value                                |
+|Operational Owner          |         |Tag Value                                |
+
+
+
+## 2. Requirements
 
 
 | Requirement#  |Date | Description | Addressed By     | Reviewed Date  |
@@ -55,13 +57,13 @@ The version control section is used to capture design modifications.
 |               |     |             |                  |                |
 
 
-## 6. AS-IS
+## 3. AS-IS
 
 ```note
 If this is a transformation or migration please provide the AS-IS detail.
 ```
 
-### 6.1 Physical Architecture
+### 3.1 Physical Architecture
 
 ```mermaid
 graph LR
@@ -176,7 +178,7 @@ graph TD
         classDef KeyClass fill:#FFFFFF,stroke:grey,stroke-width:2px, stroke-dasharray: 3
 ```
 
-### 6.2 Bill Of Materials
+### 3.2 Bill Of Materials
 
 |               |S-FINCO-SQL01|S-FINCO-WEB01|S-FINCO-WEB02|
 |---------------|-------------|-------------|-------------|
@@ -192,7 +194,7 @@ graph TD
 |Subnet         |             |             |             |
 
 
-### 6.3 Key Statistics
+### 3.3 Key Statistics
 
 |Statistic            | AS-IS       |
 |---------------------|-------------|
@@ -203,9 +205,22 @@ graph TD
 |3 Year TCO           |      £45,000|
 
 
-## 7. TO-BE
+## 4. TO-BE
 
-### 7.1 Physical Architecture
+### 4.1 Identity & Access Management
+#### 4.1.1 Privilege Access Management    
+#### 4.1.2 Privilege Identity Management  
+#### 4.1.3 Managed Identities             
+#### 4.1.4 Service Principals             
+#### 4.1.5 Role Base Access Control       
+
+### 4.2 Backup & Disaster Recovery
+#### 4.2.1 Backup
+#### 4.2.2 Disaster Recovery
+
+
+
+### 4.1 Physical Architecture
 
 ```mermaid
 graph LR
@@ -286,7 +301,7 @@ graph LR
         %%style UnsureCallout0 fill:#FFBB33	,stroke:#333,stroke-width:1px , stroke-dasharray: 2
 ```
 
-### 7.2 Bill Of Materials
+### 4.2 Bill Of Materials
 
 |               |S-FINCO-SQL01|S-FINCO-WEB01|AS-FINCO-WWW01|
 |---------------|-------------|-------------|-------------|
@@ -301,7 +316,7 @@ graph LR
 |Virtual Network|             |             |             |
 |Subnet         |             |             |             |
 
-### 7.3 Key Statistics
+### 4.3 Key Statistics
 
 |Statistic            |    TO-BE    |
 |---------------------|-------------|
@@ -353,3 +368,13 @@ gantt
     Service introduce       :a4,after a3  , 1d    
     Decommission            :a5,after a4  , 1d    
 ```
+
+|1. Identity & Access Management    |2. Backup & DR       |3. Logging & Monitoring  |
+|-----------------------------------|---------------------|-------------------------|
+|1.1 Privilege Access Management    |2.1 Backup           |3.1 Network Watcher      |
+|1.2 Privilege Identity Management  |2.2 Disaster Recovery|3.2 Diagnostic Settings
+|1.3 Managed Identities             |                     |
+|1.4 Service Principals             |                     |
+|1.5 Role Base Access Control       |                     |
+
+

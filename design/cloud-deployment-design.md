@@ -12,7 +12,7 @@ This template is based on the Design areas for Azure Landing Zones with addition
 
 Document Status:   `Draft`      (Options are: `Draft`, `Ready for Review`, `Approved` )
 
-##### Revision Requests
+#### Revision Requests
 ```note
 The revisions requests section is used to track requests changes to the design.
 ```
@@ -23,7 +23,7 @@ The revisions requests section is used to track requests changes to the design.
 |  |  |  |  |
 |  |  |  |  |
 
-##### Version Control
+#### Version Control
 
 ```note
 The version control section is used to capture design modifications.

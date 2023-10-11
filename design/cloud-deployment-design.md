@@ -10,7 +10,7 @@ This template is based on the Design areas for Azure Landing Zones with addition
 
 #### Document Status
 
-Document Status:   `Draft`      (Options are: `Draft`, `Ready for Review`, `Approved` )
+Document Status:   **`Draft`**      *(Options are: `Draft`, `Ready for Review`, `Approved` )*
 
 #### Revision Requests
 ```note

@@ -34,3 +34,4 @@ exclude:
   - test_long
   - test
   - Cloud-Adpotion
+  - other

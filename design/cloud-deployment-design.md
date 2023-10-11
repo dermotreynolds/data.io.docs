@@ -42,7 +42,7 @@ The version control section is used to capture design modifications.
 |---------------------------|---------|-----------------------------------------|
 |Business Unit              |         |This is used to detemine the subscription|
 |Application Name           |         |This is used to determine the names of the resources|
-|Project Description        |         |                                         |
+|Description                |         |                                         |
 |Business Application Owner |         |Tag Value                                |
 |Business Technical Owner   |         |Tag Value                                |
 |Operational Owner          |         |Tag Value                                |
@@ -214,11 +214,27 @@ graph TD
 #### 4.1.4 Service Principals             
 #### 4.1.5 Role Base Access Control       
 
-### 4.2 Backup & Disaster Recovery
+### 4.2 Protect & Recover
 #### 4.2.1 Backup
 #### 4.2.2 Disaster Recovery
 
-### 
+### 4.3 Monitoring & Alerting
+#### 4.3.1 Network Watcher
+#### 4.3.2 Diagnostics / Log Analytics
+#### 4.3.3 Application Insights
+#### 4.3.4 Azure Monitor
+#### 4.3.5 Alerts
+
+### 4.4 Resource Organisation
+#### 4.4.1 Subscription
+#### 4.4.2 Management Group
+#### 4.4.3 Resource Group
+#### 4.4.4 Tagging
+
+
+
+
+
 
 
 
@@ -371,4 +387,6 @@ gantt
     Decommission            :a5,after a4  , 1d    
 ```
 
+### Appendix A - Naming Conventions
 
+https://learn.microsoft.com/en-us/azure/architecture/landing-zones/subscription-vending

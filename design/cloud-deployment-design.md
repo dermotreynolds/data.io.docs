@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Cloud Deployment Design (Draft, please customise)
+# Cloud Deployment Design (Draft)
 
 ```tip
 The purpose of this document is to provide the necessary technical details to an engineer to deploy the infrastructure.  For smaller applications this may be sufficient, for larger applications this will need to be supplemented within an overarching Solution Design.
@@ -218,6 +218,8 @@ graph TD
 #### 4.2.1 Backup
 #### 4.2.2 Disaster Recovery
 
+### 
+
 
 
 ### 4.1 Physical Architecture
@@ -368,13 +370,5 @@ gantt
     Service introduce       :a4,after a3  , 1d    
     Decommission            :a5,after a4  , 1d    
 ```
-
-|1. Identity & Access Management    |2. Backup & DR       |3. Logging & Monitoring  |
-|-----------------------------------|---------------------|-------------------------|
-|1.1 Privilege Access Management    |2.1 Backup           |3.1 Network Watcher      |
-|1.2 Privilege Identity Management  |2.2 Disaster Recovery|3.2 Diagnostic Settings
-|1.3 Managed Identities             |                     |
-|1.4 Service Principals             |                     |
-|1.5 Role Base Access Control       |                     |
 
 

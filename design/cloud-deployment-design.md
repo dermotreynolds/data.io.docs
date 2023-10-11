@@ -19,7 +19,7 @@ The revisions requests section is used to track requests changes to the design.
 
 | Date | Section | Requested Change |  Authors Comments|
 |--|--|--|--|
-||  |  |  |
+|  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
 
@@ -33,7 +33,7 @@ The version control section is used to capture design modifications.
 |--|--|--|--|--|--|
 |0.1 |01/09/2021  |Dermot Reynolds  |ALL  |Document Creation  |
 
-## 1. Application Context
+## 1. Application Definition
 
 |Name                       |Value    |Description                              |
 |---------------------------|---------|-----------------------------------------|
@@ -49,12 +49,12 @@ The version control section is used to capture design modifications.
 ## 2. Requirements
 
 
-| Requirement#  |Date | Description | Addressed By     | Reviewed Date  |
-|---------------|-----|-------------|------------------|----------------|
-|               |     |             |                  |                |
+| Requirement#  |Functional/NFR|Date | Description | Addressed By     | Reviewed Date  |
+|---------------|--------------|-----|-------------|------------------|----------------|
+|               |              |     |             |                  |                |
 
 
-## 3. AS-IS
+## 3. Current State
 
 ```note
 If this is a transformation or migration please provide the AS-IS detail.
@@ -191,7 +191,7 @@ graph TD
 |Subnet         |             |             |             |
 
 
-## 4. TO-BE
+## 4. Target
 
 ### 4.1 Identity & Access Management
 #### 4.1.1 Privilege Access Management    

@@ -2,20 +2,20 @@
 sort: 1
 ---
 
-# Cloud Deployment Design (Draft)
+# Title: Cloud Deployment Design (Draft)
 
 ```tip
 The purpose of this document is to provide the necessary technical details to an engineer to deploy the infrastructure.  For smaller applications this may be sufficient, for larger applications this will need to be supplemented within an overarching Solution Design.
 ```
 
-## Document Status
+##### Document Status
 ```note
 The Document Status section is used to display the current status of the design, the options are: Draft, Ready for Review, Approved)
 ```
 
 Document Status:   `Draft`
 
-## Revision Requests
+##### Revision Requests
 ```note
 The revisions requests section is used to track requests changes to the design.
 ```
@@ -26,7 +26,7 @@ The revisions requests section is used to track requests changes to the design.
 |  |  |  |  |
 |  |  |  |  |
 
-## Version Control
+##### Version Control
 
 ```note
 The version control section is used to capture design modifications.

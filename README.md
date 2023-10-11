@@ -1,8 +1,8 @@
 # Welcome
 
-This is the blog of Dermot Reynolds, where I share technical insights on Cloud & DevOps.
+My blog is a work in progress having been neglected for some time.
 
-This is currently undergoing a redesign to fix the layout.
+The purpose of my blog is to share  share technical insights on Cloud & DevOps.
 
 
 

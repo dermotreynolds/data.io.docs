@@ -1,5 +1,5 @@
 ---
-sort: 1
+sort: 2
 ---
 
 # DevOps Adoption (Right To Left Thinking)
@@ -57,7 +57,7 @@ flowchart LR
     subgraph Benefits
         direction LR
         2.1([1. Change Requests are now Pull Requests.])
-        2.2([2. CAB is now Peer Review               .])
+        2.2([2. CAB or Approval Workflow is now Peer Review.])
         2.3([3. Rollback is now revert               .])
         2.4([4. Changes are now commits              .])
     end

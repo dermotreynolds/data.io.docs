@@ -5,15 +5,12 @@ sort: 1
 # Title: Cloud Deployment Design (Draft)
 
 ```tip
-The purpose of this document is to provide the necessary technical details to an engineer to deploy the infrastructure.  For smaller applications this may be sufficient, for larger applications this will need to be supplemented within an overarching Solution Design.
+This template is based on the Design areas for Azure Landing Zones with additional sections relevant to application deployment.
 ```
 
 #### Document Status
-```note
-The Document Status section is used to display the current status of the design, the options are: Draft, Ready for Review, Approved)
-```
 
-Document Status:   `Draft`
+Document Status:   `Draft`      (Options are: `Draft`, `Ready for Review`, `Approved` )
 
 ##### Revision Requests
 ```note

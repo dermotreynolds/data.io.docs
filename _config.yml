@@ -3,6 +3,8 @@ description: Blog of Dermot Reynolds
 
 theme: null
 
+theme_color: #2979ff
+
 mermaid.custom: "https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.0.1/mermaid.min.js"
 
 # debug:

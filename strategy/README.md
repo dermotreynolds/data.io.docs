@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Strategy
+# Cloud Adoption Journey
 
 
 

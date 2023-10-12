@@ -35,6 +35,6 @@ text: |
 
 <i class="fa fa-check-circle text-green">checked</i>
 <i class="fa fa-battery-quarter text-red">battery</i>
-<i class="fa 1 text-red">battery</i>
+<i class="fa fa-1 text-red">battery</i>
 
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/1.svg" width="50" height="50">
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/1.svg" class="background-color: #FFFFFF;" width="50" height="50">

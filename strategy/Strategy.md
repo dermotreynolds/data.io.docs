@@ -10,15 +10,15 @@ Your strategy will inform how you execute, architect, manage and prioritise your
 
 The key steps which you need to execute in order to define your strategy are:
 
-1.  [Define and document your motivations:](#Motivations) Meet with key stakeholders and executives to document the motivations behind cloud adoption.
+1.  [Define and document your motivations:](#Motivations) Meet with key stakeholders and executives to document the motivations behind the cloud initiative.
 2.  [Document business vision:](#Vision) Engage motivated stakeholders and executives to document specific business outcomes.
-3.  [Evaluate financial considerations:](#Financial) Learn how to use the cloud to make your IT cost structure more flexible. Then, build a business case to adopt the cloud.
+3.  [Evaluate financial considerations:](#Financial) Build a business case to adopt the cloud.
 4.  [Understand technical considerations:](#Technical) Discover the technical flexibility, efficiencies, and capabilities that help you build a business case to adopt the cloud.
 
 
 ## Motivations
 
-Typically, an organisations will have a number of different [motivations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations) for performing a transformation with varying priorities, time horizons and stakeholders.
+Typically, an organisations will have a number of different [motivations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations) for performing a transformation, each of  with varying priorities, time horizons and stakeholders.
 
 You motivations need to be [classified](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations#classify-your-motivations) as they will drive your cloud adoption strategy.
 
@@ -44,7 +44,11 @@ A number of outcomes are given [here](https://learn.microsoft.com/en-us/azure/cl
 
 
 
-## Understanding your support needs
+## Financial
+
+
+
+## Technical
 
 Throughout the cloud adoption lifecycle, the various teams may require support to be successful. The following are a few examples of the types of help commonly required.
 

@@ -10,8 +10,8 @@ Your strategy will inform how you execute, architect, manage and prioritise your
 
 The key steps which you need to execute in order to define your strategy are:
 
-1.  [Define and document your motivations:](##Motivations) Meet with key stakeholders and executives to document the motivations behind cloud adoption.
-2.  [Document business vision:]() Engage motivated stakeholders and executives to document specific business outcomes.
+1.  [Define and document your motivations:](#Motivations) Meet with key stakeholders and executives to document the motivations behind cloud adoption.
+2.  [Document business vision:](#Vision) Engage motivated stakeholders and executives to document specific business outcomes.
 3.  Evaluate financial considerations: Learn how to use the cloud to make your IT cost structure more flexible. Then, build a business case to adopt the cloud.
 4.  Understand technical considerations: Discover the technical flexibility, efficiencies, and capabilities that help you build a business case to adopt the cloud.
 

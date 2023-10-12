@@ -18,9 +18,9 @@ The key steps which you need to execute in order to define your strategy are:
 
 ## Motivations
 
-Typically, an organisations will have a number of different [motivations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations) for performing a transformation, each of  with varying priorities, time horizons and stakeholders.
+Typically, an organisations will have a number of different [motivations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations) for performing a transformation, each of with varying priorities, time horizons and stakeholders.
 
-You motivations need to be [classified](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations#classify-your-motivations) as they will drive your cloud adoption strategy.
+You motivations need to be [classified](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations#classify-your-motivations) and agreed with stakeholders as they will drive your cloud adoption strategy.
 
 |Critical business events					                    |Migration					                    |Innovation						                    |
 |-								                                |-						                        |-							                        |
@@ -35,7 +35,7 @@ You motivations need to be [classified](https://learn.microsoft.com/en-us/azure/
 
 ## Vision
 
-The most successful transformation journeys start with a business outcome or Vision in mind.  Where your Motivations inform why you are conducting the program of work, your Vision will inform why you are implementing in a specific manner.
+The most successful transformation journeys start with a business outcome or Vision in mind.  Where your Motivations inform why you are conducting the program of work, your Vision will generally inform why you are implementing in a specific manner.
 
 A number of outcomes are given [here](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/) with typical ones being:
 - Fiscal / Cost Reduction
@@ -46,9 +46,26 @@ A number of outcomes are given [here](https://learn.microsoft.com/en-us/azure/cl
 
 ## Financial
 
+To develop a [Business Case](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) you need to analyse your existing estate and have a Rough Order of Magnitude(ROM) determination as to where and in what format each workload will land.  You will also need to include the cost of building the foundation and the execution of each migration.
+
+There are a number of cloud optimisations that can be implemented to reduce your costs, some of which being:
+- Right Sizing of workloads
+- Reserved Instances
+- Dev/Test Licensing for non-production workloads
+- Powering off of workloads when not in use
+- Deprecating IaaS - requiring additonal effort and tools to support - for PaaS - which requires less tools and support
 
 
 ## Technical
 
-Throughout the cloud adoption lifecycle, the various teams may require support to be successful. The following are a few examples of the types of help commonly required.
+In order to execute a successful transformation you will require a number of different types of resources engaged on your program.  The following are a few examples of the types of help commonly required.
+
+- Strategy: Support defining the business strategy, building a business case, and supporting technology strategy.
+- Plan: Support with discovery of the portfolio, quantitative assessment of the digital estate, development of a cloud adoption plan, creation of a skilling plan.
+- Ready: Support deploying a landing zone or full cloud environment capable of supporting the cloud adoption plan.
+- Migrate: Assistance migrating workloads or building a migration factory to ensure sound migration processes.
+- Innovate: Assistance developing new solutions or rebuilding/rearchitecting existing solutions to drive innovation.
+- Govern: Support or ongoing managed services to provide governance and controls across the cloud environment.
+- Manage: Support or ongoing managed services to operate the cloud platform and the workloads hosted in the cloud.
+
 

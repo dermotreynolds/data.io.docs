@@ -8,6 +8,9 @@ I am an experienced stakeholder, personnel, and technical manager, responsible f
 
 Nothing pleases me more than nurturing talent and watching people develop in their careers.
 
+## Contact
+
+You can contact me via my profile on [LinkedIn](www.linkedin.com/in/dermotreynolds).
 
 ## My Blog
 

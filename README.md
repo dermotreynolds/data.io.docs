@@ -1,9 +1,4 @@
-# Hello
-
-
-
-## About Me
-
+# About Me
 
 I am a Highly Technical Architect and Engineer with over 24 years experience in infrastructure design, deployment and management.  My specialisms including strategy, cyber security, automation and cloud design/adoption.
 

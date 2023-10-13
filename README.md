@@ -6,7 +6,7 @@
 
 <center><img src="./dermotreynolds-cropped.jpg"  width="200" alt="Dermot Reynolds"></center>
 
-I am a Highly Technical Architect and Engineer with over 24 years experience in infrastructure design, deployment and management withy specialisms including strategy, cyber security, automation and cloud design/adoption.
+I am a Highly Technical Architect and Engineer with over 24 years experience in infrastructure design, deployment and management.  My specialisms including strategy, cyber security, automation and cloud design/adoption.
 
 In my day job I apply my ability to describe large complex challenges in straightforward, deliverable terms and leverage my deep technical experience to deliver value.
 

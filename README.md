@@ -11,8 +11,8 @@ You can contact me via my profile on [LinkedIn](www.linkedin.com/in/dermotreynol
 ## My ~~B~~Log
 
 My blog is more of a log of interesting collateral that I use in my day job.
-It is a constant work in progress.
 
+It is a constant work in progress.
 
 ![Alt text](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/media/ns-arch-cust-expanded.svg#lightbox)
 

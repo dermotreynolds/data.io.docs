@@ -240,6 +240,7 @@ graph TD
 ## 4. Future Mode Of Operation
 
 ### 4.1 Identity & Access Management
+
 ```golang
 Privilege Access Management
 Privilege Identity Management

@@ -368,6 +368,14 @@ graph LR
 
 
 
-## Appendix A - Naming Conventions
+## Appendix A - References
 
+### Subscription Vending
 https://learn.microsoft.com/en-us/azure/architecture/landing-zones/subscription-vending
+
+### Security Best Practice
+https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns
+
+### Azure Landing Zones
+
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/

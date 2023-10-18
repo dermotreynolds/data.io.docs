@@ -46,8 +46,8 @@ flowchart TD
         6([Hours of Operation]):::LocationClass
    end
    class Group0 GroupClass
-   classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:10px, color:white, padding-left:0em;
-   classDef GroupClass fill:white,stroke:#E900FF,stroke-width:2px, stroke-dasharray: 0,font-size: 10px, color:white, padding-left:0em;
+   classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:12px, color:white, 
+   classDef GroupClass fill:white,stroke:#E900FF,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
 ```
 
 

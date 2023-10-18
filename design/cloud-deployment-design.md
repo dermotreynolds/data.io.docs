@@ -5,7 +5,7 @@ sort: 1
 # Application Deployment Design (Draft)
 
 ```tip
-This template is based on the Design areas for Azure Landing Zones with additional sections relevant to application deployment.
+This template is based on the design areas for Azure Landing Zones with additional sections relevant to application deployment.
 ```
 
 #### Document Status

@@ -1,20 +1,17 @@
 # About Me
 
-I am a Highly Technical Architect and Engineer with over 24 years experience in infrastructure design, deployment and management.  My specialisms including strategy, cyber security, automation and cloud design/adoption.
-
-In my day job I apply my ability to describe large complex challenges in straightforward, deliverable terms and leverage my deep technical experience to deliver value.
+I have been a Technical Architect and Engineer for over 24 years doing infrastructure design, deployment and management.  My specialisms including strategy, cyber security, automation and cloud design/adoption.
 
 I am an experienced stakeholder, personnel, and technical manager, responsible for leading and mentoring teams.
-
-Nothing pleases me more than nurturing talent and watching people develop in their careers.
 
 ## Contact
 
 You can contact me via my profile on [LinkedIn](www.linkedin.com/in/dermotreynolds).
 
-## My Blog
+## My ~~B~~Log
 
-My blog is a constant work in progress where I collate useful pieces of information that I use in my day job.
+My blog is more of a log of interesting collateral that I use in my day job.
+It is a constant work in progress.
 
 
 ![Alt text](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/media/ns-arch-cust-expanded.svg#lightbox)

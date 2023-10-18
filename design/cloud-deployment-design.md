@@ -85,7 +85,7 @@ flowchart TD
 |               |              |     |             |                  |                |
 
 
-## 3. ASI-IS
+## 3. Current Mode Of Operation
 ```mermaid
 flowchart TD
 
@@ -237,7 +237,7 @@ graph TD
 
 
 
-## 4. Target
+## 4. Fucture Mode Of Operation
 
 ### 4.1 Identity & Access Management
 ```mermaid

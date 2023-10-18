@@ -240,20 +240,7 @@ graph TD
 ## 4. Future Mode Of Operation
 
 ### 4.1 Identity & Access Management
-```mermaid
-flowchart LR
-   subgraph Group0[Identity & Access Management]
-        1([Privilege Access Management]):::LocationClass
-        2([Privilege Identity Management]):::LocationClass
-        3([Managed Identities]):::LocationClass
-        4([Service Principals]):::LocationClass
-        3([Role Base Access Control]):::LocationClass
-   end
-   class Group0 GroupClass
-   classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:12px, color:white, 
-   classDef GroupClass fill:white,stroke:#2979ff,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
-```
-```java
+```golang
 Privilege Access Management
 Privilege Identity Management
 Managed Identities

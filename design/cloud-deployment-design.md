@@ -64,13 +64,40 @@ flowchart TD
 
 ## 2. Requirements
 
+```mermaid
+flowchart TD
+
+   subgraph Group0[Requirements]
+        1([Business Drivers]):::LocationClass
+        2([Technical Drivers]):::LocationClass
+        3([Functional Requirements]):::LocationClass
+        4([Non Functional Requirements]):::LocationClass
+   
+   end
+   class Group0 GroupClass
+   classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:12px, color:white, 
+   classDef GroupClass fill:white,stroke:#2979ff,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
+```
+
 
 | Requirement#  |Functional/NFR|Date | Description | Addressed By     | Reviewed Date  |
 |---------------|--------------|-----|-------------|------------------|----------------|
 |               |              |     |             |                  |                |
 
 
-## 3. Current State
+## 3. ASI-IS
+```mermaid
+flowchart TD
+
+   subgraph Group0[AS IS]
+        1([Physical Architecture]):::LocationClass
+        2([Assets]):::LocationClass
+        3([Key Issues]):::LocationClass
+   end
+   class Group0 GroupClass
+   classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:12px, color:white, 
+   classDef GroupClass fill:white,stroke:#2979ff,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
+```
 
 ```note
 If this is a transformation or migration please provide the AS-IS detail.
@@ -191,7 +218,7 @@ graph TD
         classDef KeyClass fill:#FFFFFF,stroke:grey,stroke-width:2px, stroke-dasharray: 3
 ```
 
-### 3.2 Bill Of Materials
+### 3.2 Assets
 
 |               |S-FINCO-SQL01|S-FINCO-WEB01|S-FINCO-WEB02|
 |---------------|-------------|-------------|-------------|
@@ -206,10 +233,27 @@ graph TD
 |Virtual Network|             |             |             |
 |Subnet         |             |             |             |
 
+### 3.3 Issues
+
+
 
 ## 4. Target
 
 ### 4.1 Identity & Access Management
+```mermaid
+flowchart TD
+
+   subgraph Group0[Identity & Access Management]
+        1([Privilege Access Management]):::LocationClass
+        2([Privilege Identity Management]):::LocationClass
+        3([Managed Identities]):::LocationClass
+        4([Service Principals]):::LocationClass
+        3([Role Base Access Control]):::LocationClass
+   end
+   class Group0 GroupClass
+   classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:12px, color:white, 
+   classDef GroupClass fill:white,stroke:#2979ff,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
+```
 #### 4.1.1 Privilege Access Management    
 #### 4.1.2 Privilege Identity Management  
 #### 4.1.3 Managed Identities             

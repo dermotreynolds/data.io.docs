@@ -89,7 +89,7 @@ flowchart TD
 ```mermaid
 flowchart TD
 
-   subgraph Group0[AS IS]
+   subgraph Group0[Current Mode Of Operation]
         1([Physical Architecture]):::LocationClass
         2([Assets]):::LocationClass
         3([Key Issues]):::LocationClass

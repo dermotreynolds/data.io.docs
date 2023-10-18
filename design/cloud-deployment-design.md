@@ -34,6 +34,22 @@ The version control section is used to capture design modifications.
 |0.1 |01/09/2021  |Dermot Reynolds  |ALL  |Document Creation  |
 
 ## 1. Application Definition
+```mermaid
+flowchart TD
+
+   subgraph Group0[Application Definition]
+        1([Business Owner]):::LocationClass
+        2([IT Operations Owner]):::LocationClass
+        3([Application Name]):::LocationClass
+        4([Business Segment]):::LocationClass
+        5([Hours of Support]):::LocationClass
+        6([Hours of Operation]):::LocationClass
+   end
+   class Group0 GroupClass
+   classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:10px, color:white, padding-left:0em;
+   classDef GroupClass fill:white,stroke:#E900FF,stroke-width:2px, stroke-dasharray: 0,font-size: 10px, color:white, padding-left:0em;
+```
+
 
 |Name                       |Value    |Description                              |
 |---------------------------|---------|-----------------------------------------|

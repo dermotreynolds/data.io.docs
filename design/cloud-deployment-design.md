@@ -47,7 +47,7 @@ flowchart TD
    end
    class Group0 GroupClass
    classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:12px, color:white, 
-   classDef GroupClass fill:white,stroke:#E900FF,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
+   classDef GroupClass fill:white,stroke:#2979ff,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
 ```
 
 

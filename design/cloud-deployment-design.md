@@ -241,7 +241,7 @@ graph TD
 
 ### 4.1 Identity & Access Management
 ```mermaid
-flowchart TD
+flowchart LR
    subgraph Group0[Identity & Access Management]
         1([Privilege Access Management]):::LocationClass
         2([Privilege Identity Management]):::LocationClass
@@ -253,7 +253,13 @@ flowchart TD
    classDef LocationClass fill:#2FE15B, stroke:#2FE15B, stroke-width:2px, font-size:12px, color:white, 
    classDef GroupClass fill:white,stroke:#2979ff,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
 ```
-
+```java
+Privilege Access Management
+Privilege Identity Management
+Managed Identities
+Service Principals
+Role Base Access Control
+```
 #### 4.1.1 Privilege Access Management    
 #### 4.1.2 Privilege Identity Management  
 #### 4.1.3 Managed Identities             

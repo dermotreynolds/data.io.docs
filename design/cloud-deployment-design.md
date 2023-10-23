@@ -285,6 +285,7 @@ flowchart LR
 ### 4.5 Governance
 #### 4.5.1 Cost Management
 ##### 4.5.1.1 AS-IS Cost
+
 |Statistic            | AS-IS       |
 |---------------------|-------------|
 |Resources            |         3   |
@@ -292,7 +293,9 @@ flowchart LR
 |Yearly Infra Cost    |      £12,000|
 |1 Year TCO           |      £15,000|
 |3 Year TCO           |      £45,000|
+
 ##### 4.5.1.2 TO-BE Cost
+
 |Statistic            |    TO-BE    |
 |---------------------|-------------|
 |Resources            |            3|
@@ -300,6 +303,7 @@ flowchart LR
 |Yearly Infra Cost    |      £6,000 |
 |1 Year TCO           |      £9,000 |
 |3 Year TCO           |      £27,000|
+
 ##### 4.5.1.3 Cost Comparison
 
 ##### 4.5.1.4 Budget

@@ -79,10 +79,16 @@ flowchart TD
    classDef GroupClass fill:white,stroke:#2979ff,stroke-width:2px, stroke-dasharray: 0,font-size: 12px, color:black, padding-left:0em;
 ```
 
+### 2.1 Functional & Non-Functional Requirements
 
 | Requirement#  |Functional/NFR|Date | Description | Addressed By     | Reviewed Date  |
 |---------------|--------------|-----|-------------|------------------|----------------|
 |               |              |     |             |                  |                |
+
+### 2.2 Seasonality
+
+`Is this application or elements of it, busier at specific times of the day or year?  Are there key events that take place at specific times?`
+
 
 
 ## 3. Current Mode Of Operation
@@ -329,7 +335,11 @@ flowchart LR
 
 #### 4.10.1 Environments
 
-#### 4.10.2 Physical Architecture
+#### 4.10.2 Context
+
+``Diagram showing where this application sits``
+
+#### 4.10.3 Physical Architecture
 
 ```mermaid
 graph LR
@@ -425,6 +435,33 @@ graph LR
 |Virtual Network|             |             |             |
 |Subnet         |             |             |             |
 
+### 4.11 Optimisations
+
+```note
+If you were looking to optimise this solution in 12 months time what would you look at?
+
+Are there any features that can be implemented to make this solution more efficient?
+Can we right size workloads at specific times of the day?
+Have we used a specific sku that provides greater flexibility?
+Have we added additional features to make it easier to troubleshoot?
+```
+
+#### 4.11.1 Cost
+
+#### 4.11.1 Management
+
+#### 4.11.1 Viability
+
+#### 4.11.1 Refactoring
+
+### 4.12 Service Introduction / Handover
+
+```note
+If you were asked to support this in 12 months time at 3am what material would you look at?
+```
+#### 4.12.1 Training Videos
+
+#### 4.12.2 How Tos
 
 
 ## Appendix A - References

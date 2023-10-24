@@ -446,7 +446,7 @@ graph LR
 ### 4.11 Optimisations
 
 ```tip
-If you were looking to optimise this solution in 12 months time what would you look at?
+If you were looking to optimise this solution in 12 months time what aspects would you consider?
 
 Are there any features that can be implemented to make this solution more efficient?
 Can we right size workloads at specific times of the day?

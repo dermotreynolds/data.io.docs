@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Application Deployment Design (Draft)
+# Application Deployment Design Template (Draft)
 
 ```tip
 This template is based on a combination of personal experience and for Azure Landing Zone design area of the Microsoft Cloud Adoption Framework for Azure.

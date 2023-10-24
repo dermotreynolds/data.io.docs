@@ -6,7 +6,7 @@ I am an experienced stakeholder, personnel, and technical manager, responsible f
 
 ## Contact
 
-You can contact me via my profile on [LinkedIn](www.linkedin.com/in/dermotreynolds).
+You can contact me via my profile on [LinkedIn](https://www.linkedin.com/in/dermotreynolds).
 
 ## My ~~B~~Log
 

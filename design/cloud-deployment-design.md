@@ -445,7 +445,7 @@ graph LR
 
 ### 4.11 Optimisations
 
-```note
+```tip
 If you were looking to optimise this solution in 12 months time what would you look at?
 
 Are there any features that can be implemented to make this solution more efficient?
@@ -464,7 +464,7 @@ Have we added additional features to make it easier to troubleshoot?
 
 ### 4.12 Service Introduction / Handover
 
-```note
+```tip
 If you were asked to support this in 12 months time at 3am what material would you look at?
 ```
 #### 4.12.1 Training Videos
